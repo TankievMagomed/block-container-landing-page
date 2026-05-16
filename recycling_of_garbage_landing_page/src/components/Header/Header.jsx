@@ -1,0 +1,45 @@
+import React from 'react';
+import $ from './Header.module.css';
+import Logo from "../../assets/icon/logo.png";
+import { ReactComponent as Location } from "../../assets/icon/location.svg"
+import { MainButton } from '../Buttons/MainButton';
+import { useDisclosure } from '@mantine/hooks';
+import { Modal } from '@mantine/core';
+
+export const Header = () => {
+  const [isOpen, { open, close }] = useDisclosure(false);
+
+  return (
+    <div className={$.headerContainer}>
+      <Modal opened={isOpen} onClose={close} title="Authentication">
+        Хамас
+      </Modal>
+      <div className={$.headerCompany}>
+        <img src={Logo} alt="logo.png" />
+        <span>
+          производитель блок-контейнеров
+          <br />
+          и модульных зданий для юр. лиц
+        </span>
+      </div>
+      <div className={$.headerAddress}>
+        <Location width={17} />
+        <span>
+            АДРЕС:Г.ЛЮБЕРЦЫ, УЛ.
+            <br/>
+            КОТЕЛЬНИЧЕСКИЙ ПРОЕЗД 27А.
+        </span>
+      </div>
+      <div className={$.headerContacts}>
+        <span>+7 (499) 112-44-31
+            <br/>
+        pr@bk-resurs.ru
+        </span>
+        <MainButton onClickButton={() => {
+          open();
+        }}>Отправить ТЗ</MainButton>
+      </div>
+    </div>
+  )
+}
+

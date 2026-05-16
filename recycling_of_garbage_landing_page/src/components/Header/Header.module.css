@@ -1,0 +1,50 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.headerCompany {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    span {
+        display: inline-block;
+        font-family: 'Montserrat', Arial, sans-serif;
+        text-transform: uppercase;
+        color: #1b2c50;
+        font-size: 12px;
+        line-height: 1.55;
+        font-weight: 600;
+    }
+    img { 
+        width: 80px;
+    }
+}
+
+.headerAddress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span {
+        display: inline-block;
+        font-family: 'Montserrat', Arial, sans-serif;
+        text-transform: uppercase;
+        color: #1b2c50;
+        font-size: 12px;
+        line-height: 1.55;
+        font-weight: 500;
+    }
+}
+
+.headerContacts{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-transform: uppercase;
+    color: #1b2c50;
+    font-size: 14px;
+    line-height: 1.55;
+    font-weight: 600;
+}

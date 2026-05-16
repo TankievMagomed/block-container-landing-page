@@ -1,14 +1,12 @@
-import $ from 'react';
-import { Field } from './components/Field/Field';
+import $ from './App.module.css';
+import { Header } from './components/Header';
+import "./styles/fonts.css";
 
 
 function App() {
- 
   return (
-    <div>
-      <Field>
-
-      </Field>
+    <div className={$.mainContainer}>
+      <Header />
     </div>
   );
 }

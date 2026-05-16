@@ -1,0 +1,11 @@
+.buttonMain{
+    display: inline-block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.55;
+    font-weight: 700;
+    padding: 10px 20px;
+    background-color: #1b2c50;
+    text-transform: uppercase;
+}
