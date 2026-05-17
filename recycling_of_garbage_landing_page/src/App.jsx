@@ -1,7 +1,7 @@
 import $ from './App.module.css';
 import { Header } from './components/Header';
 import "./styles/fonts.css";
-
+import "@mantine/core/styles.layer.css";
 
 function App() {
   return (

@@ -5,14 +5,15 @@ import { ReactComponent as Location } from "../../assets/icon/location.svg"
 import { MainButton } from '../Buttons/MainButton';
 import { useDisclosure } from '@mantine/hooks';
 import { Modal } from '@mantine/core';
+import { ModalToR } from '../Modals';
 
 export const Header = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
 
   return (
     <div className={$.headerContainer}>
-      <Modal opened={isOpen} onClose={close} title="Authentication">
-        Хамас
+      <Modal opened={isOpen} onClose={close} size="auto" withCloseButton={false} centered padding={0}>
+        <ModalToR />
       </Modal>
       <div className={$.headerCompany}>
         <img src={Logo} alt="logo.png" />

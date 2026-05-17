@@ -1,0 +1,63 @@
+.ModalToRContainer{
+    padding: 40px 45px;
+    width: 660px;
+    height: 735px;
+}
+
+.Header1Modal{
+    color: #1b2c50;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.23;
+    margin-bottom: 10px;
+}
+
+.Header2Modal{
+    color: #1b2c50;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+}
+
+.InputForms{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.InputForms1{
+    height: 60px;
+    padding: 0px 20px;
+}
+
+.TextArea{
+     height: 137px;
+     padding: 17px 20px 0px;
+
+
+}
+.LoadForms{
+    display: flex;
+    flex-direction: column;
+}
+.LoadSpan{
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #000000;
+    line-height: 1.55;
+    font-size: 20px;
+}
+.SubmitSpan{
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1.55;
+    font-size: 14px;
+}
+
+.ButtonInputForms{
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+}
