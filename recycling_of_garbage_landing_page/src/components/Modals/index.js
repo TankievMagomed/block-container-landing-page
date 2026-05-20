@@ -1,1 +1,1 @@
-export * from './ModalToR';
+export * from './ModalTR';
