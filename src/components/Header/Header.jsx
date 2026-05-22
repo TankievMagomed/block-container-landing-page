@@ -12,7 +12,7 @@ export const Header = () => {
   const handleCloseModal = () => close();
   return (
     <div className={$.headerContainer}>
-      <Modal opened={isOpen} onClose={close} size="auto" withCloseButton={false} centered padding={0} transitionProps={{transition: 'pop-bottom-left'}}>
+      <Modal opened={true} onClose={close} size="auto" withCloseButton={false} centered padding={0} transitionProps={{transition: 'pop-bottom-left'}}>
         <FocusTrap.InitialFocus />
         <ModalTR onClose={ handleCloseModal} />
       </Modal>
