@@ -6,28 +6,28 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
 
-export const ModalTR = () => {
+export const ModalTR = ({ onClose }) => {
   const {
     register,
     handleSubmit,
     watch,
     setValue,
     reset,
-    formState: { errors },
+    formState,
   } = useForm({
     defaultValues: {
       telephone: "",
     },
     resolver: yupResolver(schema),
   });
+
   const handelSubmitForm = (data) => {
-    console.log(data);
     reset();
+    onClose();
   };
   const email = watch("email");
 
   const telephone = watch("telephone");
-  console.log(errors);
   return (
     <div
       className={$.ModalToRContainer}
@@ -50,44 +50,54 @@ export const ModalTR = () => {
         onSubmit={handleSubmit(handelSubmitForm)}
       >
         <MainInput
-          className={`${$.InputForms1} ${errors.telephone && $.InputErrors}`}
+          className={`${$.InputForms1} ${formState.errors.telephone && $.InputErrors}`}
           placeholder={"Напишите номер телефона"}
           type={"tel"}
           {...register("telephone")}
           onFocus={() => {
-            setValue("telephone", "+_ (___) ___-__-__");
+            setValue("telephone", "+7(___)___-__-__");
           }}
           onBlur={() => {
-            if(telephone === "+_ (___) ___-__-__" || telephone === ""){
+            if(telephone === "+7(___)___-__-__"){
               setValue("telephone", "");
             }
           }}
+          onChange={(event) => {
+            const pattern = /\d+/gm;
+            const numString = event.target.value.match(pattern);
+            const resultSearch = numString?.join('');
+            let replaceString = "+7(___)___-__-__";
+            for (let i = 1; i < resultSearch.length; i++) {
+              replaceString = replaceString.replace(/_/, resultSearch[i]);
+            }
+            setValue('telephone', replaceString);
+          }}
         />
-        {errors.telephone?.message && (
+        {formState.errors.telephone?.message && (
           <span className={$.ErrorInput}>Обязательное поле</span>
         )}
         <MainInput
-          className={`${$.InputForms1} ${errors.telephone && $.InputErrors}`}
+          className={`${$.InputForms1} ${formState.errors.email && $.InputErrors}`}
           placeholder={"Электронная почта для коммуникации"}
-          type={"email"}
+          type={"text"}
           {...register("email")}
         />
-        {errors.email?.message && (
+        {formState.errors.email?.message && (
           <span className={$.ErrorInput}>Укажите корректный email</span>
         )}
         <TextAreaInput
-          className={`${$.TextArea} ${errors.telephone && $.InputErrors}`}
+          className={`${$.TextArea} ${formState.errors.tz && $.InputErrors}`}
           placeholder={"Опишите техническое задание"}
           {...register("tz")}
         />
-        {errors.tz?.message && <span className={$.ErrorInput}>Обязательное поле (минимум 5 символов)</span>}
+        {formState.errors.tz?.message && <span className={$.ErrorInput}>Обязательное поле (минимум 5 символов)</span>}
         <div className={$.LoadForms}>
           <span className={$.LoadSpan}>
             Загрузите техническое задание, если есть:
           </span>
           <FileInput {...register("fileTz")} />
         </div>
-        {Object.keys(errors).length > 0 && (
+        {Object.keys(formState.errors).length > 0 && (
           <MainButton className={$.ErrorFiled} type={"button"}>
             Пожалуйста, заполните обязательные поля
           </MainButton>

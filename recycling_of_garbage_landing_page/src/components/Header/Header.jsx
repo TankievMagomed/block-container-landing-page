@@ -9,12 +9,12 @@ import { ModalTR } from '../Modals';
 
 export const Header = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
-
+  const handleCloseModal = () => close();
   return (
     <div className={$.headerContainer}>
-      <Modal opened={true} onClose={close} size="auto" withCloseButton={false} centered padding={0} transitionProps={{transition: 'pop-bottom-left'}}>
-            <FocusTrap.InitialFocus />
-            <ModalTR />
+      <Modal opened={isOpen} onClose={close} size="auto" withCloseButton={false} centered padding={0} transitionProps={{transition: 'pop-bottom-left'}}>
+        <FocusTrap.InitialFocus />
+        <ModalTR onClose={ handleCloseModal} />
       </Modal>
       <div className={$.headerCompany}>
         <img src={Logo} alt="logo.png" />
