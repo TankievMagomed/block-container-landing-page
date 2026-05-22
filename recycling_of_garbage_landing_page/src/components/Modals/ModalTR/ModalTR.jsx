@@ -3,24 +3,28 @@ import $ from "./ModalTR.module.css";
 import { MainInput, TextAreaInput, FileInput } from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
 import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import { schema } from "./yupSchema";
 
 export const ModalTR = () => {
   const {
     register,
     handleSubmit,
     watch,
-    formState,
-  } = useForm();
-  const handelSubmitForm = (event) => {
-    event.preventDefault(); //Убирает дефолтное поведение
-    console.log(event);
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      telephone: "+_ (___) ___-__-__",
+    },
+    resolver: yupResolver(schema)
+  });
+  const handelSubmitForm = (data) => {
+    console.log(data);
   };
-  const email = watch('email');
-  console.log('email', email);
+  const email = watch("email");
 
-  const telephone = watch('telephone');
-  console.log('telephone', telephone);
-
+  const telephone = watch("telephone");
+  console.log(errors);
   return (
     <div
       className={$.ModalToRContainer}
@@ -40,24 +44,15 @@ export const ModalTR = () => {
       </div>
       <form
         className={$.InputForms}
-        onSubmit={handelSubmitForm}
+        onSubmit={handleSubmit(handelSubmitForm)}
       >
         <MainInput
-          // value={telInput}
-          // onFocus={() => {
-          //   setTelInput('+_ (___) ___-__-__');
-          // }}
-          // onBlur={() => {
-          //   setTelInput('');
-          // }}
-          // onChange={(e) => {
-          // setTelInput(e)
-          // }}
-          className={$.InputForms1}
+          className={`${$.InputForms1} ${errors.telephone && $.TelephoneInputErrors}`}
           placeholder={"Напишите номер телефона"}
           type={"tel"}
           {...register("telephone")}
         />
+         {errors.telephone?.type==='matches' && <span>Это поле обязательно</span>}
         <MainInput
           className={$.InputForms1}
           placeholder={"Электронная почта для коммуникации"}
@@ -66,9 +61,11 @@ export const ModalTR = () => {
         />
         <TextAreaInput
           className={$.TextArea}
-          placeholder={"Опишите техническое задание (необязательно)"}
+          placeholder={"Опишите техническое задание"}
           {...register("tz")}
         />
+        {errors.tz?.type==='required' && <span>Это поле обязательно</span>}
+        {errors.tz?.type==='minLength' && <span>Минимальная длина 5 символов</span>}
         <div className={$.LoadForms}>
           <span className={$.LoadSpan}>
             Загрузите техническое задание, если есть:

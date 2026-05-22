@@ -61,3 +61,17 @@
     font-family: 'Montserrat', Arial, sans-serif;
 
 }
+
+.TelephoneInputErrors{
+    border-color: red;
+}
+.TelephoneInputErrors:focus{
+    border-color: red;
+    outline-color:red;
+    outline:none;
+}
+.TelephoneInputErrors:active{
+    border-color: red;
+    outline-color:red;
+    outline:none;
+}
