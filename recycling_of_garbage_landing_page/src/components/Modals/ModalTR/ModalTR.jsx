@@ -3,7 +3,7 @@ import $ from "./ModalTR.module.css";
 import { MainInput, TextAreaInput, FileInput } from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
 import { useForm } from "react-hook-form";
-import { yupResolver } from '@hookform/resolvers/yup';
+import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
 
 export const ModalTR = () => {
@@ -11,15 +11,18 @@ export const ModalTR = () => {
     register,
     handleSubmit,
     watch,
+    setValue,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
-      telephone: "+_ (___) ___-__-__",
+      telephone: "",
     },
-    resolver: yupResolver(schema)
+    resolver: yupResolver(schema),
   });
   const handelSubmitForm = (data) => {
     console.log(data);
+    reset();
   };
   const email = watch("email");
 
@@ -47,31 +50,48 @@ export const ModalTR = () => {
         onSubmit={handleSubmit(handelSubmitForm)}
       >
         <MainInput
-          className={`${$.InputForms1} ${errors.telephone && $.TelephoneInputErrors}`}
+          className={`${$.InputForms1} ${errors.telephone && $.InputErrors}`}
           placeholder={"Напишите номер телефона"}
           type={"tel"}
           {...register("telephone")}
+          onFocus={() => {
+            setValue("telephone", "+_ (___) ___-__-__");
+          }}
+          onBlur={() => {
+            if(telephone === "+_ (___) ___-__-__" || telephone === ""){
+              setValue("telephone", "");
+            }
+          }}
         />
-         {errors.telephone?.type==='matches' && <span>Это поле обязательно</span>}
+        {errors.telephone?.message && (
+          <span className={$.ErrorInput}>Обязательное поле</span>
+        )}
         <MainInput
-          className={$.InputForms1}
+          className={`${$.InputForms1} ${errors.telephone && $.InputErrors}`}
           placeholder={"Электронная почта для коммуникации"}
           type={"email"}
           {...register("email")}
         />
+        {errors.email?.message && (
+          <span className={$.ErrorInput}>Укажите корректный email</span>
+        )}
         <TextAreaInput
-          className={$.TextArea}
+          className={`${$.TextArea} ${errors.telephone && $.InputErrors}`}
           placeholder={"Опишите техническое задание"}
           {...register("tz")}
         />
-        {errors.tz?.type==='required' && <span>Это поле обязательно</span>}
-        {errors.tz?.type==='minLength' && <span>Минимальная длина 5 символов</span>}
+        {errors.tz?.message && <span className={$.ErrorInput}>Обязательное поле (минимум 5 символов)</span>}
         <div className={$.LoadForms}>
           <span className={$.LoadSpan}>
             Загрузите техническое задание, если есть:
           </span>
           <FileInput {...register("fileTz")} />
         </div>
+        {Object.keys(errors).length > 0 && (
+          <MainButton className={$.ErrorFiled} type={"button"}>
+            Пожалуйста, заполните обязательные поля
+          </MainButton>
+        )}
         <MainButton
           className={$.ButtonInputForms}
           type={"submit"}

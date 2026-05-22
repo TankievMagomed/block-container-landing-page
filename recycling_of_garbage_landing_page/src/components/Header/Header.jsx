@@ -4,7 +4,7 @@ import Logo from "../../assets/icon/logo.png";
 import { ReactComponent as Location } from "../../assets/icon/location.svg"
 import { MainButton } from '../Buttons/MainButton';
 import { useDisclosure } from '@mantine/hooks';
-import { Modal} from '@mantine/core';
+import { Modal, FocusTrap} from '@mantine/core';
 import { ModalTR } from '../Modals';
 
 export const Header = () => {
@@ -13,6 +13,7 @@ export const Header = () => {
   return (
     <div className={$.headerContainer}>
       <Modal opened={true} onClose={close} size="auto" withCloseButton={false} centered padding={0} transitionProps={{transition: 'pop-bottom-left'}}>
+            <FocusTrap.InitialFocus />
             <ModalTR />
       </Modal>
       <div className={$.headerCompany}>
