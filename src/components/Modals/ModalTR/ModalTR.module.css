@@ -1,7 +1,8 @@
 .ModalToRContainer{
     padding: 40px 45px;
     width: 660px;
-    height: 735px;
+    min-height: 735px;
+    height: auto;
 }
 
 .Header1Modal{
