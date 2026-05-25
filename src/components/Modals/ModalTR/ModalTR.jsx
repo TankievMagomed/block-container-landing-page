@@ -28,17 +28,17 @@ export const ModalTR = ({ onClose }) => {
 
   return (
     <div
-      className={$.ModalToRContainer}
+      className={$.modal__container}
       style={{
         transition: "width 5s ease 100ms",
       }}
     >
-      <div className={$.Header1Modal}>
+      <div className={$.modal__header}>
         Получите решение в
         <br />
         течении 1 часа
       </div>
-      <div className={$.Header2Modal}>
+      <div className={$.modal__subheader}>
         Наши эксперты помогут выбрать лучшее решение,
         <br />
         проконсультируют по условиям, рассчитают сроки и стоимость
@@ -48,7 +48,7 @@ export const ModalTR = ({ onClose }) => {
         onSubmit={handleSubmit(handelSubmitForm)}
       >
         <MainInput
-          className={`${$.InputForms1} ${errors.telephone && $.InputErrors}`}
+          className={`${$.InputForms1} ${errors.telephone && $.modal__inputErrors}`}
           placeholder={"Напишите номер телефона"}
           type={"tel"}
           {...register("telephone")}
@@ -132,40 +132,39 @@ export const ModalTR = ({ onClose }) => {
           }}
         />
         {errors.telephone?.message && (
-          <span className={$.ErrorInput}>Обязательное поле</span>
+          <span className={$.modal__inputError}>Обязательное поле</span>
         )}
         <MainInput
-          className={`${$.InputForms1} ${errors.email && $.InputErrors}`}
+          className={`${$.InputForms1} ${errors.email && $.modal__inputErrors}`}
           placeholder={"Электронная почта для коммуникации"}
           type={"text"}
           {...register("email")}
         />
         {errors.email?.message && (
-          <span className={$.ErrorInput}>Укажите корректный email</span>
+          <span className={$.modal__inputError}>Укажите корректный email</span>
         )}
         <TextAreaInput
-          className={`${$.TextArea} ${errors.tz && $.InputErrors}`}
+          className={`${$.TextArea} ${errors.tz && $.modal__inputErrors}`}
           placeholder={"Опишите техническое задание"}
           {...register("tz")}
         />
         {errors.tz?.message && (
-          <span className={$.ErrorInput}>
+          <span className={$.modal__inputError}>
             Обязательное поле (минимум 5 символов)
           </span>
         )}
-        <div className={$.LoadForms}>
+        <div className={$.modal__loadForm}>
           <span className={$.LoadSpan}>
             Загрузите техническое задание, если есть:
           </span>
           <FileInput {...register("fileTz")} />
         </div>
         {Object.keys(errors).length > 0 && (
-          <MainButton
-            className={$.ErrorFiled}
-            type={"button"}
+          <div
+            className={$.modal__formError}
           >
             Пожалуйста, заполните обязательные поля
-          </MainButton>
+          </div>
         )}
         <MainButton
           className={$.ButtonInputForms}

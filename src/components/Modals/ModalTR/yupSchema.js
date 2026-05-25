@@ -13,6 +13,6 @@ export const schema = yup
       .required("Email обязателен")
       .email("Введите корректный email"),
 
-    tz: yup.string().required("Поле обязательно для заполения"),
+    tz: yup.string().required("Поле обязательно для заполения").min(5),
   })
   .required();
