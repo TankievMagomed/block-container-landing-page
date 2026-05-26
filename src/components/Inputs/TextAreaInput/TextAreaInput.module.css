@@ -1,0 +1,25 @@
+.textArea {
+  height: 60px;
+  padding: 0px 20px;
+}
+
+.textAreaErrors{
+  border-color: red;
+}
+
+.textAreaErrors:focus{
+  border-color: red;
+  outline-color:red;
+  outline:none;
+}
+
+.textAreaErrors:active{
+  border-color: red;
+  outline-color:red;
+  outline:none;
+}
+
+.textArea__errorMassage{
+  color: red;
+  font-size: 10px;
+}

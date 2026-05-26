@@ -1,0 +1,25 @@
+.input {
+  height: 60px;
+  padding: 0px 20px;
+}
+
+.inputErrors{
+  border-color: red;
+}
+
+.inputErrors:focus{
+  border-color: red;
+  outline-color:red;
+  outline:none;
+}
+
+.inputErrors:active{
+  border-color: red;
+  outline-color:red;
+  outline:none;
+}
+
+.input__errorMassage{
+  color: red;
+  font-size: 10px;
+}

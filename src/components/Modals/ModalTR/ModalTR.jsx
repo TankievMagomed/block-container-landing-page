@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import $ from "./ModalTR.module.css";
 import { MainInput, TextAreaInput, FileInput } from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
@@ -103,7 +103,6 @@ export const ModalTR = ({ onClose }) => {
               const lustNumberIndex = value.search(/\d(?!.*\d)/);
 
               if (value.length >= replaceString.length) {
-                console.log(1);
                 if (value[lustNumberIndex + 1] === "_") {
                   currentElement?.setSelectionRange(
                     lustNumberIndex + 1,
@@ -116,10 +115,7 @@ export const ModalTR = ({ onClose }) => {
                   );
                 }
               } else {
-                console.log(
-                  value[lustNumberIndex],
-                  pattern.test(value[lustNumberIndex]),
-                );
+                pattern.test(value[lustNumberIndex]);
                 if (!pattern.test(value[lustNumberIndex])) {
                   currentElement?.setSelectionRange(
                     lustNumberIndex + 1,
@@ -130,29 +126,24 @@ export const ModalTR = ({ onClose }) => {
               currentElement.style.caretColor = "auto";
             }, 100);
           }}
+          error={errors.telephone}
+          errorMessage={'Обязательное поле'}
         />
-        {errors.telephone?.message && (
-          <span className={$.modal__inputError}>Обязательное поле</span>
-        )}
         <MainInput
           className={`${$.InputForms1} ${errors.email && $.modal__inputErrors}`}
           placeholder={"Электронная почта для коммуникации"}
           type={"text"}
           {...register("email")}
+          error={errors.email}
+          errorMessage={'Укажите корректный email'}
         />
-        {errors.email?.message && (
-          <span className={$.modal__inputError}>Укажите корректный email</span>
-        )}
         <TextAreaInput
           className={`${$.TextArea} ${errors.tz && $.modal__inputErrors}`}
           placeholder={"Опишите техническое задание"}
           {...register("tz")}
+          error={errors.tz}
+          errorMessage={'Обязательное поле (минимум 5 символов)'}
         />
-        {errors.tz?.message && (
-          <span className={$.modal__inputError}>
-            Обязательное поле (минимум 5 символов)
-          </span>
-        )}
         <div className={$.modal__loadForm}>
           <span className={$.LoadSpan}>
             Загрузите техническое задание, если есть:
@@ -160,9 +151,7 @@ export const ModalTR = ({ onClose }) => {
           <FileInput {...register("fileTz")} />
         </div>
         {Object.keys(errors).length > 0 && (
-          <div
-            className={$.modal__formError}
-          >
+          <div className={$.modal__formError}>
             Пожалуйста, заполните обязательные поля
           </div>
         )}

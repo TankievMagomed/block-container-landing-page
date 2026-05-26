@@ -28,14 +28,10 @@
     flex-direction: column;
     gap: 2px;
 }
-.InputForms1{
-    height: 60px;
-    padding: 0px 20px;
-}
 
 .TextArea{
-     height: 100px;
-     padding: 17px 20px 0px;
+    height: 100px;
+    padding: 17px 20px 0px;
 
 
 }
