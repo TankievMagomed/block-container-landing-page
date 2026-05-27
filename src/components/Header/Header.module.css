@@ -1,11 +1,11 @@
-.headerContainer{
+.header__container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 30px;
 }
 
-.headerCompany {
+.header__company {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -23,7 +23,7 @@
     }
 }
 
-.headerAddress {
+.header__address {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -38,7 +38,7 @@
     }
 }
 
-.headerContacts{
+.header__contacts{
     display: flex;
     justify-content: space-between;
     gap: 10px;

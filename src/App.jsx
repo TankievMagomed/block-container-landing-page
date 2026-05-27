@@ -5,7 +5,7 @@ import "@mantine/core/styles.layer.css";
 
 function App() {
   return (
-    <div className={$.mainContainer}>
+    <div className={$.app__container}>
       <Header />
     </div>
   );
