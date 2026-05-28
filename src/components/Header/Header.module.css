@@ -36,6 +36,11 @@
         line-height: 1.55;
         font-weight: 600;
     }
+    svg {
+        path {
+            fill: #1b2c50;
+        }
+    }
 }
 
 

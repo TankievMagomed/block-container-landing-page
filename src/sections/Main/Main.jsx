@@ -4,7 +4,7 @@ import $ from "./Main.module.css";
 import { MainButton } from "../../components";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
-import { ModalTR } from "../../components";
+import { ModalTR, Checkbox} from "../../components";
 import { ReactComponent as Check } from "../../assets/icon/checked.svg"
 
 export const Main = () => {
@@ -12,6 +12,7 @@ export const Main = () => {
   const handleCloseModal = () => close();
   return (
     <div className={$.main__section}>
+      <Checkbox/>
       <Modal
         opened={isOpen}
         onClose={close}

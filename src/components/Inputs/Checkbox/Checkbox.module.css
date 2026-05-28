@@ -1,0 +1,37 @@
+.checkbox__label {
+  position: relative;
+}
+
+.checkbox {
+  opacity: 0;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 4px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.checkbox__cover {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0px;
+  border: 2px solid #000;
+}
+
+.checkbox:checked + .checkbox__cover:after {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    content: "";
+    height: 10px;
+    left: 6px;
+    position: absolute;
+    top: 2px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 5px;
+    display: block;
+}
+

@@ -1,0 +1,14 @@
+import React, {useRef} from 'react'
+import $ from './Checkbox.module.css'
+
+export const Checkbox = ({ title, ...rest }) => {
+  const ref = useRef(null);
+  console.log(ref);
+  return (
+    <label htmlFor="" className={$.checkbox__label}>
+      <input ref={ ref} className={$.checkbox} type="checkbox" {...rest} />
+      <div className={$.checkbox__cover}/>
+      <span>{title}</span>
+    </label>
+  )
+}

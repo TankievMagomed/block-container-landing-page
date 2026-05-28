@@ -3,7 +3,8 @@
     background-position: 2.355% 21.209%;
     background-size: 186.798%;
     background-repeat: no-repeat;
-    width: 1690px;
+    max-width: 1690px;
+    width: 100%;
     height: 860px;
     margin: 0 auto;
 }
