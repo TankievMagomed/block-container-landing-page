@@ -25,7 +25,7 @@ export const Header = () => {
         </span>
       </div>
       <div className={$.header__address}>
-        <Location width={17} />
+        <Location width={17}/>
         <span>
             АДРЕС:Г.ЛЮБЕРЦЫ, УЛ.
             <br/>

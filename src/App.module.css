@@ -1,3 +1,13 @@
+.app__wrapper {
+    background-image: url('./assets/img/box-container.png');
+    background-position: 2.355% 21.209%;
+    background-size: 186.798%;
+    background-repeat: no-repeat;
+    width: 1690px;
+    height: 860px;
+    margin: 0 auto;
+}
+
 .app__container{
     max-width: 1200px;
     margin: 0 auto;
