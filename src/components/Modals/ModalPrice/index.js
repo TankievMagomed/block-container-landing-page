@@ -1,2 +1,1 @@
-export * from './ModalTR';
 export * from "./ModalPrice";

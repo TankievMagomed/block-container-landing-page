@@ -1,0 +1,23 @@
+.modalPrice__attention {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #000000;
+}
+
+.modalPrice__spanUnderline {
+  text-decoration: underline;
+}
+
+.modalPrice__checkbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalPrice__checkboxHeaderText {
+  font-weight: 200;
+  font-size: 23px;
+  line-height: 1.55;
+  font-family: 'Montserrat';
+  color: #00000095;
+}

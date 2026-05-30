@@ -8,7 +8,7 @@ export const Checkbox = ({ title, ...rest }) => {
     <label htmlFor="" className={$.checkbox__label}>
       <input ref={ ref} className={$.checkbox} type="checkbox" {...rest} />
       <div className={$.checkbox__cover}/>
-      <span>{title}</span>
+      <span className={$.checkbox__text}>{title}</span>
     </label>
   )
 }

@@ -1,5 +1,5 @@
 .checkbox__label {
-  position: relative;
+    position: relative;
 }
 
 .checkbox {
@@ -34,4 +34,9 @@
     width: 5px;
     display: block;
 }
+
+.checkbox__text{
+  margin-left: 20px;
+}
+
 

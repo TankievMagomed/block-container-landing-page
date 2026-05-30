@@ -1,13 +1,14 @@
 import React from "react";
 import $ from "./../Modal.module.css";
-import $$ from "./ModalTR.module.css";
-import { MainInput, TextAreaInput, FileInput, PhoneInput} from "../../Inputs";
+import $$ from "./ModalPrice.module.css";
+import { MainInput, TextAreaInput, PhoneInput } from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
+import { Checkbox } from "../../Inputs";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
 
-export const ModalTR = ({ onClose }) => {
+export const ModalPrice = ({ onClose }) => {
   const {
     register,
     handleSubmit,
@@ -34,15 +35,23 @@ export const ModalTR = ({ onClose }) => {
       }}
     >
       <div className={$.modal__header}>
-        Получите решение в
+        Получите решение,
         <br />
-        течении 1 часа
+        стоимость и сроки за 1 час
       </div>
       <div className={$.modal__subheader}>
         Наши эксперты помогут выбрать лучшее решение,
         <br />
         проконсультируют по условиям, рассчитают сроки и стоимость
       </div>
+      <div className={$$.modalPrice__attention}>
+        <span className={$$.modalPrice__spanUnderline}>
+          Работаем только с ю
+        </span>
+        р<span className={$$.modalPrice__spanUnderline}>.ли</span>ц
+        <span className={$$.modalPrice__spanUnderline}>ами</span>
+      </div>
+
       <form
         className={$.modal__form}
         onSubmit={handleSubmit(handelSubmitForm)}
@@ -64,6 +73,20 @@ export const ModalTR = ({ onClose }) => {
           error={errors.email}
           errorMessage={"Укажите корректный email"}
         />
+        <div className={$$.modalPrice__checkbox}>
+            <span className={$$.modalPrice__checkboxHeaderText}>Назначение модулей</span>
+            <Checkbox title={"Административно бытовые комплексы"}/>
+            <Checkbox title={"Прорабские и строительные"}/>
+            <Checkbox title={"Штабы-строительства"}/>
+            <Checkbox title={"КПП, посты охраны"}/>
+            <Checkbox title={"Технические блоки"}/>
+            <Checkbox title={"Сантехнические"}/>
+            <Checkbox title={"Офисы продаж"}/>
+            <Checkbox title={"Общежитие"}/>
+            <Checkbox title={"Столовые"}/>
+            <Checkbox title={"Свой вариант"}/>
+        </div>
+        
         <TextAreaInput
           className={$.modal__textarea}
           placeholder={"Опишите техническое задание"}
@@ -71,12 +94,6 @@ export const ModalTR = ({ onClose }) => {
           error={errors.tz}
           errorMessage={"Обязательное поле (минимум 5 символов)"}
         />
-        <div className={$.modal__loadForm}>
-          <span className={$.modal__fileLabel}>
-            Загрузите техническое задание, если есть:
-          </span>
-          <FileInput {...register("fileTz")} />
-        </div>
         {Object.keys(errors).length > 0 && (
           <div className={$.modal__formError}>
             Пожалуйста, заполните обязательные поля

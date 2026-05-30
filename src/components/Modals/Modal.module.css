@@ -1,0 +1,72 @@
+.modal__container{
+    padding: 40px 45px;
+    width: 660px;
+    height: auto;
+}
+
+.modal__header{
+    color: #1b2c50;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.23;
+    margin-bottom: 10px;
+}
+
+.modal__subheader{
+    color: #1b2c50;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 10px;
+}
+
+.modal__form{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.modal__textarea{
+    height: 100px;
+    padding: 17px 20px 0px;
+
+
+}
+.modal__loadForm{
+    display: flex;
+    flex-direction: column;
+}
+.modal__fileLabel{
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #000000;
+    line-height: 1.55;
+    font-size: 20px;
+}
+.modal__consent{
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1.55;
+    font-size: 14px;
+}
+
+.modal__submitButton{
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+}
+.modal__formError{
+    color:white;
+    background-color: red;
+    border-color: red;
+    font-size: 16px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.55;
+    font-weight: 600;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    height: 45px;
+    text-align: center
+}
