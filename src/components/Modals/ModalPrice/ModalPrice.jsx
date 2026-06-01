@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import $ from "./../Modal.module.css";
 import $$ from "./ModalPrice.module.css";
 import { MainInput, TextAreaInput, PhoneInput } from "../../Inputs";
@@ -26,6 +26,7 @@ export const ModalPrice = ({ onClose }) => {
     reset();
     onClose();
   };
+  const [checkbox, setCheckbox] = useState(false);
 
   return (
     <div
@@ -74,19 +75,37 @@ export const ModalPrice = ({ onClose }) => {
           errorMessage={"Укажите корректный email"}
         />
         <div className={$$.modalPrice__checkbox}>
-            <span className={$$.modalPrice__checkboxHeaderText}>Назначение модулей</span>
-            <Checkbox title={"Административно бытовые комплексы"}/>
-            <Checkbox title={"Прорабские и строительные"}/>
-            <Checkbox title={"Штабы-строительства"}/>
-            <Checkbox title={"КПП, посты охраны"}/>
-            <Checkbox title={"Технические блоки"}/>
-            <Checkbox title={"Сантехнические"}/>
-            <Checkbox title={"Офисы продаж"}/>
-            <Checkbox title={"Общежитие"}/>
-            <Checkbox title={"Столовые"}/>
-            <Checkbox title={"Свой вариант"}/>
+          <span className={$$.modalPrice__checkboxHeaderText}>
+            Назначение модулей
+          </span>
+          <Checkbox title={"Административно бытовые комплексы"} />
+          <Checkbox title={"Прорабские и строительные"} />
+          <Checkbox title={"Штабы-строительства"} />
+          <Checkbox title={"КПП, посты охраны"} />
+          <Checkbox title={"Технические блоки"} />
+          <Checkbox title={"Сантехнические"} />
+          <Checkbox title={"Офисы продаж"} />
+          <Checkbox title={"Общежитие"} />
+          <Checkbox title={"Столовые"} />
+          <div className={$$.modalPrice__checkboxCustomOption}>
+            <Checkbox
+            onChange={() => {
+              setCheckbox((prev) => !prev);
+            }}
+            title={"Свой вариант"}
+          />
+          {checkbox && <MainInput
+            className={$$.modalPrice__customInput}
+            {...register("customOption")}
+            error={errors.customOption}
+            errorMessage={"Обязательное поле (минимум 1 символ)"}
+            type={"text"}
+          />}
+          </div>
+          
+          
         </div>
-        
+
         <TextAreaInput
           className={$.modal__textarea}
           placeholder={"Опишите техническое задание"}

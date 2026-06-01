@@ -12,12 +12,28 @@
 .modalPrice__checkbox {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .modalPrice__checkboxHeaderText {
   font-weight: 200;
   font-size: 23px;
   line-height: 1.55;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   color: #00000095;
+}
+
+.modalPrice__checkboxCustomOption {
+  display: flex;
+  align-items: center;
+}
+.modalPrice__customInput {
+  flex: 1;
+  margin-left: 5px;
+  padding: 0px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background: transparent;
 }

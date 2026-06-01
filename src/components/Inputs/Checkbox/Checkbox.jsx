@@ -5,7 +5,7 @@ export const Checkbox = ({ title, ...rest }) => {
   const ref = useRef(null);
   console.log(ref);
   return (
-    <label htmlFor="" className={$.checkbox__label}>
+    <label className={$.checkbox__label}>
       <input ref={ ref} className={$.checkbox} type="checkbox" {...rest} />
       <div className={$.checkbox__cover}/>
       <span className={$.checkbox__text}>{title}</span>
