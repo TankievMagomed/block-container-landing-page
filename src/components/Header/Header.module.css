@@ -1,57 +1,55 @@
-.header__container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
 }
 
 .header__company {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    span {
-        display: inline-block;
-        font-family: 'Montserrat', Arial, sans-serif;
-        text-transform: uppercase;
-        color: #1b2c50;
-        font-size: 12px;
-        line-height: 1.55;
-        font-weight: 600;
-    }
-    img { 
-        width: 80px;
-    }
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  span {
+    display: inline-block;
+    font-family: "Montserrat", Arial, sans-serif;
+    text-transform: uppercase;
+    color: #1b2c50;
+    font-size: 12px;
+    line-height: 1.55;
+    font-weight: 600;
+  }
+  img {
+    width: 80px;
+  }
 }
 
 .header__address {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    span {
-        display: inline-block;
-        font-family: 'Montserrat', Arial, sans-serif;
-        text-transform: uppercase;
-        color: #1b2c50;
-        font-size: 12px;
-        line-height: 1.55;
-        font-weight: 600;
-    }
-    svg {
-        path {
-            fill: #1b2c50;
-        }
-    }
-}
-
-
-.header__contacts{
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    font-family: 'Montserrat', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  span {
+    display: inline-block;
+    font-family: "Montserrat", Arial, sans-serif;
     text-transform: uppercase;
     color: #1b2c50;
-    font-size: 14px;
-    line-height: 1.55;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  svg {
+    path {
+      fill: #1b2c50;
+    }
+  }
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #1b2c50;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  gap: 20px;
 }

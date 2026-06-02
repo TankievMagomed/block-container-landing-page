@@ -4,8 +4,8 @@ import $ from "./Main.module.css";
 import { MainButton } from "../../components";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
-import { ModalPrice} from "../../components";
-import { ReactComponent as Check } from "../../assets/icon/checked.svg"
+import { ModalPrice } from "../../components";
+import { ReactComponent as Check } from "../../assets/icon/checked.svg";
 
 export const Main = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
@@ -28,21 +28,17 @@ export const Main = () => {
       <div className={$.main__container}>
         <div className={$.main__subContainer}>
           <Chip>Работаем только с юр.лицами</Chip>
-          <Chip>От производителя в Москве  </Chip>
+          <Chip>От производителя в Москве </Chip>
           <h1 className={$.main__containerText}>
             Производим{" "}
-            <span className={$.main__spanUnderline}>
+            <u>
               блок-
               <br />
-              контейне
-            </span>
-            р<span className={$.main__spanUnderline}>ы и мо</span>ду
-            <span className={$.main__spanUnderline}>
-              льные
-              <br />з
-            </span>
-            д<span className={$.main__spanUnderline}>ания</span> под ваши
-            требования
+              контейнеры и модульные
+              <br />
+              здания
+            </u>{" "}
+            под ваши требования
             <br />
             точно в срок под ключ
           </h1>
@@ -52,7 +48,8 @@ export const Main = () => {
             Подберем решение <br />и спроектирум
           </div>
           <div className={$.main__chip}>
-            Произведем БК любой <br />
+            Произведем БК любой
+            <br />
             сложности вовремя
           </div>
           <div className={$.main__chip}>
@@ -80,7 +77,7 @@ export const Main = () => {
           >
             Получить цену и сроки
           </MainButton>
-          <MainButton 
+          <MainButton
             className={$.main__button}
             type={"submit"}
           >
@@ -88,12 +85,12 @@ export const Main = () => {
           </MainButton>
         </div>
         <div className={$.main__textInfo}>
-          <Check width={50}/>
-        <span>
-          Ваш объект за 5-15 дней к полной
-          <br />
-          готовности под ключ, в Москве и МО
-        </span>
+          <Check width={50} />
+          <span>
+            Ваш объект за 5-15 дней к полной
+            <br />
+            готовности под ключ, в Москве и МО
+          </span>
         </div>
       </div>
     </div>

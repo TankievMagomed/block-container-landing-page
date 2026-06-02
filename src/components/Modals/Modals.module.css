@@ -1,0 +1,72 @@
+.modal__container {
+  padding: 40px 45px;
+  width: 660px;
+  height: auto;
+}
+
+.modal__header {
+  color: #1b2c50;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.23;
+  margin-bottom: 10px;
+}
+
+.modal__subheader {
+  color: #1b2c50;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.modal__textarea {
+  height: 100px;
+  padding: 17px 20px 0px;
+}
+.modal__loadForm {
+  display: flex;
+  flex-direction: column;
+}
+.modal__fileLabel {
+  font-family: "Montserrat";
+  color: #000000;
+  line-height: 1.55;
+  font-size: 20px;
+  font-weight: 300;
+}
+.modal__consent {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.modal__submitButton {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+.modal__formError {
+  color: white;
+  background-color: #f95d51;
+  border-color: red;
+  font-size: 20px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  padding: 0 20px;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

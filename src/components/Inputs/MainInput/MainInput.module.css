@@ -1,25 +1,31 @@
 .input {
   height: 60px;
   padding: 0px 20px;
+  font-family: 'Montserrat';
 }
 
 .inputErrors{
   border-color: red;
+  font-family: 'Montserrat';
 }
 
 .inputErrors:focus{
   border-color: red;
   outline-color:red;
   outline:none;
+  font-family: 'Montserrat';
 }
 
 .inputErrors:active{
   border-color: red;
   outline-color:red;
   outline:none;
+  font-family: 'Montserrat';
 }
 
 .input__errorMassage{
   color: red;
-  font-size: 10px;
+  font-size: 13px;
+  font-family: 'Open Sans';
+  font-weight: 300 800;
 }

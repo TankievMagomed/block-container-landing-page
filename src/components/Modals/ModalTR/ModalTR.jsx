@@ -1,5 +1,5 @@
 import React from "react";
-import $ from "./../Modal.module.css";
+import $ from "./../Modals.module.css";
 import $$ from "./ModalTR.module.css";
 import { MainInput, TextAreaInput, FileInput, PhoneInput} from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
@@ -75,18 +75,18 @@ export const ModalTR = ({ onClose }) => {
           <span className={$.modal__fileLabel}>
             Загрузите техническое задание, если есть:
           </span>
-          <FileInput {...register("fileTz")} />
+          <FileInput placeholder={"Загрузите файлы"} {...register("fileTz")} />
         </div>
         {Object.keys(errors).length > 0 && (
           <div className={$.modal__formError}>
-            Пожалуйста, заполните обязательные поля
+            Пожалуйста, заполните все обязательные поля
           </div>
         )}
         <MainButton
           className={$.modal__submitButton}
           type={"submit"}
         >
-          Запросить предложение →
+          Запросить предложение ⟶
         </MainButton>
         <span className={$.modal__consent}>
           Нажимая на кнопку, вы даете согласие на обработку персональных данных

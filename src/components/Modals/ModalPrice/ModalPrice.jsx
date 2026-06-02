@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import $ from "./../Modal.module.css";
+import $ from "./../Modals.module.css";
 import $$ from "./ModalPrice.module.css";
 import { MainInput, TextAreaInput, PhoneInput } from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
@@ -7,7 +7,7 @@ import { Checkbox } from "../../Inputs";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
-
+import { MODAL_PRICE_DATA } from "../../../constants";
 export const ModalPrice = ({ onClose }) => {
   const {
     register,
@@ -46,13 +46,8 @@ export const ModalPrice = ({ onClose }) => {
         проконсультируют по условиям, рассчитают сроки и стоимость
       </div>
       <div className={$$.modalPrice__attention}>
-        <span className={$$.modalPrice__spanUnderline}>
-          Работаем только с ю
-        </span>
-        р<span className={$$.modalPrice__spanUnderline}>.ли</span>ц
-        <span className={$$.modalPrice__spanUnderline}>ами</span>
+        <u>Работаем только с юр.лицами</u>
       </div>
-
       <form
         className={$.modal__form}
         onSubmit={handleSubmit(handelSubmitForm)}
@@ -78,34 +73,32 @@ export const ModalPrice = ({ onClose }) => {
           <span className={$$.modalPrice__checkboxHeaderText}>
             Назначение модулей
           </span>
-          <Checkbox title={"Административно бытовые комплексы"} />
-          <Checkbox title={"Прорабские и строительные"} />
-          <Checkbox title={"Штабы-строительства"} />
-          <Checkbox title={"КПП, посты охраны"} />
-          <Checkbox title={"Технические блоки"} />
-          <Checkbox title={"Сантехнические"} />
-          <Checkbox title={"Офисы продаж"} />
-          <Checkbox title={"Общежитие"} />
-          <Checkbox title={"Столовые"} />
+          {MODAL_PRICE_DATA.map(({ title }) => {
+            return (
+              <Checkbox
+                key={title}
+                title={title}
+              />
+            );
+          })}
           <div className={$$.modalPrice__checkboxCustomOption}>
             <Checkbox
-            onChange={() => {
-              setCheckbox((prev) => !prev);
-            }}
-            title={"Свой вариант"}
-          />
-          {checkbox && <MainInput
-            className={$$.modalPrice__customInput}
-            {...register("customOption")}
-            error={errors.customOption}
-            errorMessage={"Обязательное поле (минимум 1 символ)"}
-            type={"text"}
-          />}
+              onChange={() => {
+                setCheckbox((prev) => !prev);
+              }}
+              title={"Свой вариант"}
+            />
+            {checkbox && (
+              <MainInput
+                className={$$.modalPrice__customInput}
+                {...register("customOption")}
+                error={errors.customOption}
+                errorMessage={"Обязательное поле (минимум 1 символ)"}
+                type={"text"}
+              />
+            )}
           </div>
-          
-          
         </div>
-
         <TextAreaInput
           className={$.modal__textarea}
           placeholder={"Опишите техническое задание"}
@@ -122,7 +115,7 @@ export const ModalPrice = ({ onClose }) => {
           className={$.modal__submitButton}
           type={"submit"}
         >
-          Запросить предложение →
+          Рассчитать стоимость →
         </MainButton>
         <span className={$.modal__consent}>
           Нажимая на кнопку, вы даете согласие на обработку персональных данных
