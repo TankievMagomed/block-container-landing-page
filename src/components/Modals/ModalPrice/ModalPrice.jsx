@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import $ from "./../Modals.module.css";
 import $$ from "./ModalPrice.module.css";
 import { MainInput, TextAreaInput, PhoneInput } from "../../Inputs";
@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
 import { MODAL_PRICE_DATA } from "../../../constants";
+
 export const ModalPrice = ({ onClose }) => {
   const {
     register,
@@ -18,6 +19,7 @@ export const ModalPrice = ({ onClose }) => {
   } = useForm({
     defaultValues: {
       telephone: "",
+      modules: [],
     },
     resolver: yupResolver(schema),
   });
@@ -27,6 +29,8 @@ export const ModalPrice = ({ onClose }) => {
     onClose();
   };
   const [checkbox, setCheckbox] = useState(false);
+
+  const registerCustomModule = register("modules");
 
   return (
     <div
@@ -73,31 +77,39 @@ export const ModalPrice = ({ onClose }) => {
           <span className={$$.modalPrice__checkboxHeaderText}>
             Назначение модулей
           </span>
-          {MODAL_PRICE_DATA.map(({ title }) => {
-            return (
+          <div className={$$.modalPrice__checkboxList}>
+            {MODAL_PRICE_DATA.map(({ title }) => {
+              return (
+                <Checkbox
+                  {...register("modules")}
+                  value={title}
+                  key={title}
+                  title={title}
+                />
+              );
+            })}
+            <div className={$$.modalPrice__checkboxCustomOption}>
               <Checkbox
-                key={title}
-                title={title}
+                {...registerCustomModule}
+                onChange={(event) => {
+                  registerCustomModule.onChange(event);
+                  setCheckbox((prev) => !prev);
+                }}
+                title={"Свой вариант"}
               />
-            );
-          })}
-          <div className={$$.modalPrice__checkboxCustomOption}>
-            <Checkbox
-              onChange={() => {
-                setCheckbox((prev) => !prev);
-              }}
-              title={"Свой вариант"}
-            />
-            {checkbox && (
-              <MainInput
-                className={$$.modalPrice__customInput}
-                {...register("customOption")}
-                error={errors.customOption}
-                errorMessage={"Обязательное поле (минимум 1 символ)"}
-                type={"text"}
-              />
-            )}
+              {checkbox && (
+                <MainInput
+                  className={$$.modalPrice__customInput}
+                  {...register("customOption")}
+                  error={errors.customOption}
+                  errorMessage={"Обязательное поле (минимум 1 символ)"}
+                  type={"text"}
+                />
+              )}
+            </div>
           </div>
+          {/* Застилизовать */}
+          {!!errors.modules && <span>{errors.modules.message}</span>}
         </div>
         <TextAreaInput
           className={$.modal__textarea}
