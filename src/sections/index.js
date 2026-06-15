@@ -1,8 +1,8 @@
 export * from "./Main";
+export * from "./CompletedProjects";
 // export * from "./AboutTheCompany";
 // export * from "./AdditionalServices";
 // export * from "./Certificates";
-// export * from "./CompletedProjects";
 // export * from "./Contacts";
 // export * from "./Functionality";
 // export * from "./Production";
