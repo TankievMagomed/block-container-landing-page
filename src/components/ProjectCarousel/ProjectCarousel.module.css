@@ -1,0 +1,48 @@
+.projectCarousel {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.projectCarousel img {
+  width: 100%;
+  object-fit: cover;
+  /* чтобы картинка не обрезалась криво и вписалась по высоте и не растянулась */
+  height: 280px;
+  cursor: zoom-in;
+}
+
+.projectCarousel__photoBox {
+  position: relative;
+}
+
+.projectCarousel__textTitle {
+  color: #1b2c50;
+  font-size: 16px;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 25px;
+  font-weight: 500;
+  white-space: pre-line;
+}
+
+.projectCarousel__photoFull {
+  position: fixed;
+  cursor:default;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectCarousel__photoFull img {
+  width: 80%;
+  height: 80vh;
+  object-fit: contain;
+  cursor:default;
+}

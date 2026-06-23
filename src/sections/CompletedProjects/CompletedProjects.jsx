@@ -6,6 +6,8 @@ import Mobil from "../../assets/icon/Clients/Mobil.webp";
 import Pic from "../../assets/icon/Clients/Pic.webp";
 import { ReactComponent as Samolet } from "../../assets/icon/Clients/samolet.svg";
 import Smart from "../../assets/icon/Clients/smart.webp";
+import { ProjectCarousel } from "components/ProjectCarousel/ProjectCarousel";
+import { COMPLETED_PROJECTS_DATA } from "constants";
 
 export const CompletedProjects = () => {
   return (
@@ -42,6 +44,17 @@ export const CompletedProjects = () => {
           src={Mobil}
           alt="Mobil"
         />
+      </div>
+      <div className={$.completedProjects__photoProjects}>
+        {COMPLETED_PROJECTS_DATA.map(({ title, photos }) => {
+          return (
+            <ProjectCarousel
+              title={title}
+              photos={photos}
+              key={title}
+            />
+          );
+        })}
       </div>
     </div>
   );

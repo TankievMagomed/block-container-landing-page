@@ -6,6 +6,7 @@ import { MainButton } from "../Buttons/MainButton";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
 import { ModalTR } from "../Modals";
+import { ModalCloseButton } from "components/Buttons";
 
 export const Header = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
@@ -24,6 +25,7 @@ export const Header = () => {
         <FocusTrap.InitialFocus />
         <ModalTR onClose={handleCloseModal} />
       </Modal>
+      {isOpen && <ModalCloseButton onClickButton={close} />}
       <div className={$.header__company}>
         <img
           src={Logo}

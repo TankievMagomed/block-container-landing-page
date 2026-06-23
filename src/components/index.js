@@ -3,3 +3,4 @@ export * from './Modals';
 export * from './Buttons';
 export * from './Inputs';
 export * from './Chip';
+export * from './ProjectCarousel';

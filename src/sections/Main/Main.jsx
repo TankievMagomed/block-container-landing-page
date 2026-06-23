@@ -6,6 +6,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
 import { ModalPrice } from "../../components";
 import { ReactComponent as Check } from "../../assets/icon/checked.svg";
+import { ModalCloseButton } from "../../components";
 
 export const Main = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
@@ -24,6 +25,7 @@ export const Main = () => {
         <FocusTrap.InitialFocus />
         <ModalPrice onClose={handleCloseModal} />
       </Modal>
+      {isOpen && <ModalCloseButton onClickButton={close} />}
       <Header />
       <div className={$.main__container}>
         <div className={$.main__subContainer}>
