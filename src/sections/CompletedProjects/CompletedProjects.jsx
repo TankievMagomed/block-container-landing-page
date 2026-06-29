@@ -8,10 +8,32 @@ import { ReactComponent as Samolet } from "../../assets/icon/Clients/samolet.svg
 import Smart from "../../assets/icon/Clients/smart.webp";
 import { ProjectCarousel } from "components/ProjectCarousel/ProjectCarousel";
 import { COMPLETED_PROJECTS_DATA } from "constants";
+import { Modal, FocusTrap } from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
+import { ModalCloseButton } from "../../components";
+import { ModalReviews } from "components/Modals/ModalReviews/ModalReviews";
+import { MainButton } from "../../components";
 
 export const CompletedProjects = () => {
+  const [isOpen, { open, close }] = useDisclosure(false);
+  const handleCloseModal = () => close();
   return (
     <div className={$.completedProjects__section}>
+      <Modal
+        fullScreen
+        opened={isOpen}
+        onClose={close}
+        size="auto"
+        withCloseButton={false}
+        centered
+        padding={0}
+        transitionProps={{ transition: "pop-bottom-left" }}
+        styles={{ body: { backgroundColor: 'rgb(238, 233, 233)', padding: 0 } }}
+      >
+        <FocusTrap.InitialFocus />
+        <ModalReviews onClose={handleCloseModal} />
+      </Modal>
+      {isOpen && <ModalCloseButton onClickButton={close} />}
       <h1 className={$.completedProjects__headerText}>
         Нам доверили реализацию своих проектов
         <br />
@@ -55,6 +77,17 @@ export const CompletedProjects = () => {
             />
           );
         })}
+      </div>
+      <div className={$.completedProjects__buttonField}>
+        <MainButton
+          className={$.completedProjects__buttonReviews}
+          type={"submit"}
+          onClickButton={() => {
+            open();
+          }}
+        >
+          Смотреть рекомендательные письма
+        </MainButton>
       </div>
     </div>
   );

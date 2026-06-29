@@ -1,0 +1,54 @@
+.modalReviews__container {
+  height: 1250px;
+  width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(238, 233, 233);
+}
+.modalReviews__header {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  gap: 30px;
+}
+
+.modalReviews__headerText {
+  color: #1b2c50;
+  line-height: 59px;
+  font-size: 38px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
+}
+
+.modalReviews__subHeaderText {
+  color: #1b2c50;
+  line-height: 28px;
+  font-size: 18px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.modalReviews__letters {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalReviews__letter {
+  display: flex;
+  width: 15%;
+}
+.modalReviews__letter img {
+  width: 100%;
+  object-fit: cover;
+  /* чтобы картинка не обрезалась криво и вписалась по высоте и не растянулась */
+  height: 280px;
+  cursor: zoom-in;
+}

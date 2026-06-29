@@ -1,6 +1,7 @@
 import $ from './App.module.css';
 import { CompletedProjects, Main } from 'sections';
 import "./styles/fonts.css";
+import "./styles/root.css";
 import "@mantine/core/styles.layer.css";
 
 function App() {
