@@ -5,3 +5,4 @@ export * from './Inputs';
 export * from './Chip';
 export * from './ProjectCarousel';
 export * from './FullImage';
+export * from './IconCard';

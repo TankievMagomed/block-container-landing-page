@@ -1,5 +1,5 @@
 import $ from './App.module.css';
-import { CompletedProjects, Main } from 'sections';
+import { CompletedProjects, Main, WhyUs } from 'sections';
 import "./styles/fonts.css";
 import "./styles/root.css";
 import "@mantine/core/styles.layer.css";
@@ -10,6 +10,7 @@ function App() {
       <div className={$.app__container}>
         <Main />
         <CompletedProjects />
+        <WhyUs/>
       </div>
     </div>
   );

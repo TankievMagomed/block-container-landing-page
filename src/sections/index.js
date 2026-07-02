@@ -1,5 +1,6 @@
 export * from "./Main";
 export * from "./CompletedProjects";
+export * from "./WhyUs";
 // export * from "./AboutTheCompany";
 // export * from "./AdditionalServices";
 // export * from "./Certificates";
