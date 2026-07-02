@@ -19,7 +19,10 @@ export const ModalReviews = () => {
       <div className={$.modalReviews__letters}>
         {MODAL_REVIEWS_DATA.map(({ title, photos }, index) => {
           return (
-            <div className={$.modalReviews__letter}>
+            <div
+              className={$.modalReviews__letter}
+              key={title}
+            >
               <img
                 onClick={() => setSelectedPhotoIndex(index)}
                 src={photos}
@@ -32,7 +35,8 @@ export const ModalReviews = () => {
       {selectedPhotoIndex !== null && (
         <FullImage
           photos={MODAL_REVIEWS_DATA.map(({ photos }) => photos[0])}
-          onClose={() => setSelectedPhotoIndex(false)}
+          initialIndex={selectedPhotoIndex}
+          onClose={() => setSelectedPhotoIndex(null)}
         />
       )}
     </div>

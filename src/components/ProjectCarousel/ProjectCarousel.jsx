@@ -37,11 +37,12 @@ export const ProjectCarousel = ({ title, photos, ...rest }) => {
         />
       </div>
       <span className={$.projectCarousel__textTitle}>{title}</span>
-      {isFullPhoto === true && (
+      {isFullPhoto && (
         <FullImage
           photos={photos}
           title={title}
           onClose={() => setIsFullPhoto(false)}
+          initialIndex={currentIndexPhoto}
         />
       )}
     </div>
