@@ -10,7 +10,6 @@ import { ProjectCarousel } from "components/ProjectCarousel/ProjectCarousel";
 import { COMPLETED_PROJECTS_DATA } from "constants";
 import { Modal, FocusTrap } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { ModalCloseButton } from "../../components";
 import { ModalReviews } from "components/Modals/ModalReviews/ModalReviews";
 import { MainButton } from "../../components";
 
@@ -31,9 +30,8 @@ export const CompletedProjects = () => {
         styles={{ body: { backgroundColor: 'rgb(238, 233, 233)', padding: 0 } }}
       >
         <FocusTrap.InitialFocus />
-        <ModalReviews onClose={handleCloseModal} />
+        <ModalReviews handleCloseModal={handleCloseModal} />
       </Modal>
-      {isOpen && <ModalCloseButton onClickButton={close} />}
       <h1 className={$.completedProjects__headerText}>
         Нам доверили реализацию своих проектов
         <br />

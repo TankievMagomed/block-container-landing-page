@@ -9,12 +9,6 @@ export const ProjectCarousel = ({ title, photos, ...rest }) => {
   return (
     <div className={$.projectCarousel}>
       <div className={$.projectCarousel__photoBox}>
-        <img
-          className={$.projectCarousel__img}
-          onClick={() => setIsFullPhoto(!isFullPhoto)}
-          src={photos[currentIndexPhoto]}
-          alt={title}
-        />
         <ArrowButton
           direction="left"
           onClickButton={() => {
@@ -24,6 +18,12 @@ export const ProjectCarousel = ({ title, photos, ...rest }) => {
               setCurrentIndexPhoto(currentIndexPhoto - 1);
             }
           }}
+        />
+        <img
+          className={$.projectCarousel__img}
+          onClick={() => setIsFullPhoto(!isFullPhoto)}
+          src={photos[currentIndexPhoto]}
+          alt={title}
         />
         <ArrowButton
           direction="right"
@@ -43,6 +43,7 @@ export const ProjectCarousel = ({ title, photos, ...rest }) => {
           title={title}
           onClose={() => setIsFullPhoto(false)}
           initialIndex={currentIndexPhoto}
+          colorModalCloseButton={"#000"}
         />
       )}
     </div>

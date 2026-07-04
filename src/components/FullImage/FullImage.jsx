@@ -8,6 +8,7 @@ export const FullImage = ({
   photos,
   onClose,
   initialIndex,
+  modalCloseButtonColor,
   ...rest
 }) => {
   const [currentIndexPhoto, setCurrentIndexPhoto] = useState(initialIndex);
@@ -37,7 +38,7 @@ export const FullImage = ({
           }
         }}
       />
-      <ModalCloseButton onClickButton={onClose} />
+      <ModalCloseButton onClickButton={onClose} color={modalCloseButtonColor}/>
     </div>
   );
 };

@@ -2,7 +2,7 @@ export const COMPLETED_PROJECTS_DATA = [
   {
     title: "Административно-бытовой комплекс,\n АО Мобиль, г. Пермь",
     photos: [
-      require("../assets/img/CompletedProject/1.1.webp"),
+      require( "../assets/img/CompletedProject/1.1.webp"),
       require("../assets/img/CompletedProject/1.2.webp"),
     ],
   },

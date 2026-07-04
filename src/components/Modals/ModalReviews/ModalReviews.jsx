@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import $ from "./ModalReviews.module.css";
 import { MODAL_REVIEWS_DATA } from "constants";
 import { FullImage } from "components/FullImage";
+import { ModalCloseButton } from "components/Buttons";
 
-export const ModalReviews = () => {
+export const ModalReviews = ({handleCloseModal}) => {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(null);
   return (
     <div className={$.modalReviews__container}>
+      <ModalCloseButton onClickButton={handleCloseModal} color={"#000"} />
       <div className={$.modalReviews__header}>
         <h1 className={$.modalReviews__headerText}>
           Благодарственные письма <br /> от директоров компаний
@@ -37,6 +39,7 @@ export const ModalReviews = () => {
           photos={MODAL_REVIEWS_DATA.map(({ photos }) => photos[0])}
           initialIndex={selectedPhotoIndex}
           onClose={() => setSelectedPhotoIndex(null)}
+          modalCloseButtonColor={"#000"}
         />
       )}
     </div>
