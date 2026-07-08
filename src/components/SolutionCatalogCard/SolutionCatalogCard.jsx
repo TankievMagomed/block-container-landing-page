@@ -17,11 +17,11 @@ export const SolutionCatalogCard = ({ title, photos, ...rest }) => {
         />
       </div>
       <span className={$.solutionCatalogCard__textTitle}>{title}</span>
-      {currentIndexPhoto !== 0 && isFullPhoto && (
+      {isFullPhoto && (
         <FullImage
           photos={SOLUTION_CATALOG_DATA.map(({ photos }) => photos[0])}
           initialIndex={currentIndexPhoto}
-          onClose={() => setCurrentIndexPhoto(0)}
+          onClose={() => setIsFullPhoto(false)}
           modalCloseButtonColor={"#000"}
         />
       )}
