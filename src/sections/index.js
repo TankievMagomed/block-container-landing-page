@@ -1,6 +1,7 @@
 export * from "./Main";
 export * from "./CompletedProjects";
 export * from "./WhyUs";
+export * from "./SolutionCatalog";
 // export * from "./AboutTheCompany";
 // export * from "./AdditionalServices";
 // export * from "./Certificates";
@@ -10,5 +11,4 @@ export * from "./WhyUs";
 // export * from "./Quality";
 // export * from "./Reviews";
 // export * from "./Service";
-// export * from "./SolutionCatalog";
 // export * from "./Warranty";
