@@ -1,0 +1,28 @@
+.modalPriceInquiry__header {
+  color: #1b2c50;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.23;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modalPriceInquiry__subheader {
+  color: #1b2c50;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.55;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modalPriceInquiry__consent {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  color: #000000;
+  line-height: 1.55;
+  font-size: 14px;
+  text-align: center;
+}

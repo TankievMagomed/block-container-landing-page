@@ -13,12 +13,13 @@ export const SolutionCatalog = () => {
         компоновке, материалу и планировке
       </span>
       <div className={$.solutionCatalog__photoProjects}>
-        {SOLUTION_CATALOG_DATA.map(({ title, photos }) => {
+        {SOLUTION_CATALOG_DATA.map(({ title, photos }, index) => {
           return (
             <SolutionCatalogCard
               title={title}
               photos={photos}
               key={title}
+              index={index}
             />
           );
         })}

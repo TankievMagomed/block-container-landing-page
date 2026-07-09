@@ -7,12 +7,5 @@ export const schema = yup
       .matches(/^\+[0-9()-]+$/, "Введите корректный номер телефона")
       .min(15, "Длина должна быть 11 символов")
       .max(16, "Длина должна быть 11 символов"),
-
-    email: yup
-      .string()
-      .required("Email обязателен")
-      .email("Введите корректный email"),
-
-    tz: yup.string().required("Поле обязательно для заполения").min(5),
   })
   .required();

@@ -1,0 +1,11 @@
+.infoButton__section {
+  width: 40px;
+  height: 40px;
+  color: #141414;
+  font-size: 24px;
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  border-radius: 30px;
+  background-color: white;
+}

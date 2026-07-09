@@ -27,7 +27,7 @@ export const CompletedProjects = () => {
         centered
         padding={0}
         transitionProps={{ transition: "pop-bottom-left" }}
-        styles={{ body: { backgroundColor: 'rgb(238, 233, 233)', padding: 0 } }}
+        styles={{ body: { backgroundColor: "rgb(238, 233, 233)", padding: 0 } }}
       >
         <FocusTrap.InitialFocus />
         <ModalReviews handleCloseModal={handleCloseModal} />
