@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import $ from "./../Modals.module.css";
 import $$ from "./ModalPrice.module.css";
 import { MainInput, TextAreaInput, PhoneInput } from "../../Inputs";
@@ -24,10 +24,13 @@ export const ModalPrice = ({ onClose }) => {
     resolver: yupResolver(schema),
   });
 
-  const handelSubmitForm = (data) => {
+  const handelSubmitForm = useCallback(() => {
     reset();
     onClose();
-  };
+  }, [reset, onClose]);
+
+  const handleSubmitFormForReactHookForm = handleSubmit(handelSubmitForm);
+
   const [checkbox, setCheckbox] = useState(false);
 
   const registerCustomModule = register("modules");
@@ -54,7 +57,7 @@ export const ModalPrice = ({ onClose }) => {
       </div>
       <form
         className={$.modal__form}
-        onSubmit={handleSubmit(handelSubmitForm)}
+        onSubmit={handleSubmitFormForReactHookForm}
       >
         <PhoneInput
           className={$.modal__input}

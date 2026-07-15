@@ -1,7 +1,10 @@
 import React from "react";
 import $ from "./SolutionCatalog.module.css";
 import { SOLUTION_CATALOG_DATA } from "constants";
-import { SolutionCatalogCard } from "components/SolutionCatalogCard";
+import { SolutionCatalogCard } from "components/SolutionCatalogComponents";
+import { SolutionCatalogAddInformation } from "components/SolutionCatalogComponents";
+import { SolutionCatalogGetSolution } from "components/SolutionCatalogComponents/SolutionCatalogGetSolution/SolutionCatalogGetSolution";
+
 
 export const SolutionCatalog = () => {
   return (
@@ -24,6 +27,8 @@ export const SolutionCatalog = () => {
           );
         })}
       </div>
+      <SolutionCatalogAddInformation/>
+      <SolutionCatalogGetSolution/>
     </div>
   );
 };

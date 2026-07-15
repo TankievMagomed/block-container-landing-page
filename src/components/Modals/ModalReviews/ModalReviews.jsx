@@ -32,7 +32,7 @@ export const ModalReviews = ({handleCloseModal}) => {
               />
             </div>
           );
-        })}
+        })} 
       </div>
       {selectedPhotoIndex !== null && (
         <FullImage

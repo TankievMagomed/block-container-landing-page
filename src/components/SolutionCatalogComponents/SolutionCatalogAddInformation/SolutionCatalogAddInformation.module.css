@@ -1,0 +1,43 @@
+.solutionCatalogAddInformation__section {
+  width: 100%;
+  display: flex;
+  background-color: #1b2c50;
+  margin-bottom: 100px;
+}
+
+.solutionCatalogAddInformation__info {
+  padding: 70px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.solutionCatalogAddInformation__infoHeaderText {
+  line-height: 46px;
+  color: #ffffff;
+  font-size: 34px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.solutionCatalogAddInformation__infoSubHeaderText {
+  line-height: 25px;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.solutionCatalogAddInformation__button{
+    width: 260px;
+    height: 70px;
+    display: inline-block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #1b2c50;
+    font-size: 15px;
+    line-height: 1.55;
+    font-weight: 700;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 2px;
+}

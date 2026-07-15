@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import $ from "./SolutionCatalogCard.module.css";
-import { FullImage } from "components/FullImage";
+import { FullImage } from "../../FullImage";
 import { SOLUTION_CATALOG_DATA } from "constants";
-import { MainButton } from "../Buttons/MainButton";
+import { MainButton } from "../../Buttons/MainButton";
 import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
-import { ModalCloseButton } from "components/Buttons";
-import { ModalPriceInquiry } from "../Modals/ModalPriceInquiry/ModalPriceInquiry";
-import { InfoButton } from "components/Buttons/InfoButton/InfoButton";
-import { ModalCertificates } from "components/Modals/ModalCertificates/ModalCertificates";
+import { ModalCloseButton } from "../../Buttons";
+import { ModalPriceInquiry } from "../../Modals/ModalPriceInquiry/ModalPriceInquiry";
+import { InfoButton } from "../../Buttons/InfoButton/InfoButton";
+import { ModalCertificates } from "../../Modals/ModalCertificates/ModalCertificates";
 
 export const SolutionCatalogCard = ({ title, photos, index, ...rest }) => {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(null);

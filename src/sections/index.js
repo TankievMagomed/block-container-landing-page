@@ -2,6 +2,7 @@ export * from "./Main";
 export * from "./CompletedProjects";
 export * from "./WhyUs";
 export * from "./SolutionCatalog";
+export * from './PhotoGallery';
 // export * from "./AboutTheCompany";
 // export * from "./AdditionalServices";
 // export * from "./Certificates";

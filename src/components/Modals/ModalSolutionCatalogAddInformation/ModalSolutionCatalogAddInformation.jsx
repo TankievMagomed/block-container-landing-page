@@ -1,13 +1,14 @@
 import React from "react";
 import $ from "./../Modals.module.css";
-import $$ from "./ModalPriceInquiry.module.css";
+import $$ from "./ModalSolutionCatalogAddInformation.module.css";
 import { PhoneInput } from "../../Inputs";
+import { TextAreaInput } from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
 
-export const ModalPriceInquiry = ({ onClose }) => {
+export const ModalSolutionCatalogAddInformation = ({ onClose }) => {
   const {
     register,
     handleSubmit,
@@ -33,20 +34,27 @@ export const ModalPriceInquiry = ({ onClose }) => {
         transition: "width 5s ease 100ms",
       }}
     >
-      <div className={$$.modalPriceInquiry__header}>
-        Получите сегодня решение,
+      <div className={$$.modalSolutionCatalogAddInformation__header}>
+        Получите решение, стоимость и
         <br />
-        стоимость и сроки
+        сроки за 1 час
       </div>
-      <div className={$$.modalPriceInquiry__subheader}>
+      <div className={$$.modalSolutionCatalogAddInformation__subheader}>
         Наши эксперты помогут выбрать лучшее решение, проконсультируют по
         <br />
-        условиям, рассчитают стоимость и сроки
+        условиям, рассчитают сроки и стоимость
       </div>
       <form
-        className={$$.modalPriceInquiry__form}
+        className={$$.modalSolutionCatalogAddInformation__form}
         onSubmit={handleSubmit(handelSubmitForm)}
       >
+        <TextAreaInput
+          className={$.modal__textarea}
+          placeholder={"Ваше имя"}
+          {...register("tz")}
+          error={errors.tz}
+          errorMessage={"Обязательное поле (минимум 2 символа)"}
+        />
         <PhoneInput
           className={$.modal__input}
           placeholder={"Напишите номер телефона"}
@@ -60,9 +68,9 @@ export const ModalPriceInquiry = ({ onClose }) => {
           className={$.modal__submitButton}
           type={"submit"}
         >
-          Получить решение, стоимость и сроки ⟶
+          ✓ Получить решение
         </MainButton>
-        <span className={$$.modalPriceInquiry__consent}>
+        <span className={$$.modalSolutionCatalogAddInformation__consent}>
           Нажимая на кнопку, вы даете согласие на обработку персональных данных
           и соглашаетесь c политикой конфиденциальности
         </span>

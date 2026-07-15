@@ -1,4 +1,4 @@
-.modalPriceInquiry__header {
+.modalSolutionCatalogAddInformation__header {
   color: #1b2c50;
   font-family: "Montserrat";
   font-weight: 600;
@@ -7,13 +7,12 @@
   margin-bottom: 10px;
   text-align: center;
 }
-
-.modalPriceInquiry__form {
+.modalSolutionCatalogAddInformation__form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.modalPriceInquiry__subheader {
+.modalSolutionCatalogAddInformation__subheader {
   color: #1b2c50;
   font-family: "Montserrat";
   font-weight: 500;
@@ -23,7 +22,7 @@
   text-align: center;
 }
 
-.modalPriceInquiry__consent {
+.modalSolutionCatalogAddInformation__consent {
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 300;
   color: #000000;

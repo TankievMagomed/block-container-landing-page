@@ -6,4 +6,4 @@ export * from './Chip';
 export * from './ProjectCarousel';
 export * from './FullImage';
 export * from './IconCard';
-export * from './SolutionCatalogCard';
+export * from './SolutionCatalogComponents';
