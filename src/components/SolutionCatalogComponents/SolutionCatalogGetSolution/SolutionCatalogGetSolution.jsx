@@ -4,7 +4,7 @@ import Boss from "../../../assets/img/SolutionCatalog/BigBoss.png";
 import { MainButton } from "components/Buttons";
 import { ReactComponent as Paper } from "../../../assets/icon/paper.svg";
 import { SOLUTION_CATALOG_CHECK_DATA } from "constants/SolutionCatalogCheckData";
-import { ReactComponent as Check } from "../../../assets/icon/checked_2.svg";
+import { ReactComponent as Check2 } from "../../../assets/icon/checked_2.svg";
 import { PhoneInput } from "components/Inputs";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -60,7 +60,7 @@ export const SolutionCatalogGetSolution = () => {
                   key={index}
                   className={$.solutionCatalogGetSolution__checkItem}
                 >
-                  <Check
+                  <Check2
                     width={25}
                     height={25}
                   />

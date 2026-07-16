@@ -5,3 +5,4 @@ export * from "./WhyUsData";
 export * from "./SolutionCatalogData";
 export * from "./ModalCertificatesData";
 export * from "./SolutionCatalogCheckData";
+export * from "./PhotoGallery";

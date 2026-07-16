@@ -87,7 +87,7 @@ export const Main = () => {
           </MainButton>
         </div>
         <div className={$.main__textInfo}>
-          <Check width={50} />
+          <Check width={50}/>
           <span>
             Ваш объект за 5-15 дней к полной
             <br />
