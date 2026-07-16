@@ -31,7 +31,7 @@ export const PhotoGallery = () => {
                 }}
               />
               <img
-                className={$.projectCarousel__img}
+                className={$.photoGallery__img}
                 onClick={() => setIsFullPhoto(!isFullPhoto)}
                 src={photo[currentIndexPhoto]}
                 alt={index}
@@ -46,6 +46,23 @@ export const PhotoGallery = () => {
                   }
                 }}
               />
+              <div className={$.photoGallery__carouselDots}>
+                {photo.map((elem, index) => {
+                  return (
+                    <span
+                      className={
+                        currentIndexPhoto === index
+                          ? $.photoGallery__carouselDotActive
+                          : $.photoGallery__carouselDot
+                      }
+                      key={index}
+                      onClick={() => {
+                        setCurrentIndexPhoto(index);
+                      }}
+                    ></span>
+                  );
+                })}
+              </div>
               {isFullPhoto && (
                 <FullImage
                   photos={photo}

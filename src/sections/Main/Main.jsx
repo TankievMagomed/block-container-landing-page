@@ -82,12 +82,17 @@ export const Main = () => {
           <MainButton
             className={$.main__button}
             type={"submit"}
+            onClickButton={() => {
+              document
+                .getElementById("solutionCatalog")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Каталог типовых решений
           </MainButton>
         </div>
         <div className={$.main__textInfo}>
-          <Check width={50}/>
+          <Check width={50} />
           <span>
             Ваш объект за 5-15 дней к полной
             <br />
