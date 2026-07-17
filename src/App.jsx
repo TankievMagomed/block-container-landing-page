@@ -5,6 +5,7 @@ import {
   WhyUs,
   SolutionCatalog,
   PhotoGallery,
+  Functionality,
 } from "sections";
 import "./styles/fonts.css";
 import "./styles/root.css";
@@ -19,6 +20,7 @@ function App() {
         <WhyUs />
         <SolutionCatalog />
         <PhotoGallery />
+        <Functionality/>
       </div>
     </div>
   );

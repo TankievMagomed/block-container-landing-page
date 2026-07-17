@@ -7,3 +7,4 @@ export * from './ProjectCarousel';
 export * from './FullImage';
 export * from './IconCard';
 export * from './SolutionCatalogComponents';
+export * from './FunctionalityInfoChip';
