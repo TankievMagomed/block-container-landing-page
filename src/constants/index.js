@@ -6,4 +6,5 @@ export * from "./SolutionCatalogData";
 export * from "./ModalCertificatesData";
 export * from "./SolutionCatalogCheckData";
 export * from "./PhotoGalleryData";
-export * from "./FunctionalityData";
+export * from "./FunctionalityOptionsData";
+export * from "./FunctionalityCardData";

@@ -1,4 +1,4 @@
-export const FUNCTIONALITY_DATA = [
+export const FUNCTIONALITY_OPTIONS_DATA = [
   {
     headerText: "Коммуникация",
     subHeaderText:
