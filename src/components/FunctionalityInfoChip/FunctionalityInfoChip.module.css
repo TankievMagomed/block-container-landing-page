@@ -1,0 +1,60 @@
+.functionalityInfoChip__section {
+  width: 100%;
+  display: flex;
+}
+.functionalityInfoChip__sectionReverse {
+  flex-direction: row-reverse;
+  width: 100%;
+  display: flex;
+}
+
+.functionalityInfoChip__img {
+  width: 50%;
+  object-fit: cover;
+  height: 360px;
+  flex-shrink: 0;
+}
+.functionalityInfoChip__text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-top: 15px;
+  width: 50%;
+  gap: 10px;
+}
+
+.functionalityInfoChip__headerText {
+  line-height: 30px;
+  color: #1b2c50;
+  font-size: 28px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  white-space: pre-line;
+}
+
+.functionalityInfoChip__subHeaderText {
+  line-height: 25px;
+  color: #1b2c50;
+  font-size: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  white-space: pre-line;
+}
+.functionalityInfoChip__infoTextField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.functionalityInfoChip__infoText {
+    display: flex;
+  line-height: 22px;
+  color: #1b2c50;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+}
+
+.functionalityInfoChip__infoText::before {
+    content: "•";
+    margin-right: 10px; 
+}

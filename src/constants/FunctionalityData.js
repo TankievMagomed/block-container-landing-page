@@ -10,7 +10,7 @@ export const FUNCTIONALITY_DATA = [
       "Интернет",
       "Отопление",
     ],
-    photos: require("../assets/img/Functionality/1.webp"),
+    photo: require("../assets/img/Functionality/1.webp"),
   },
   {
     headerText: "Планировочные решения",
@@ -24,7 +24,7 @@ export const FUNCTIONALITY_DATA = [
       "Тамбуры, подсобные и складские помещения",
       "Спальные комнаты и зоны отдыха",
     ],
-    photos: require("../assets/img/Functionality/2.webp"),
+    photo: require("../assets/img/Functionality/2.webp"),
   },
   {
     headerText: "Внутренее оснащение",
@@ -39,7 +39,7 @@ export const FUNCTIONALITY_DATA = [
       "Кондиционеры",
       "Оборудование рабочих мест",
     ],
-    photos: require("../assets/img/Functionality/3.png"),
+    photo: require("../assets/img/Functionality/3.png"),
   },
   {
     headerText: "4 вида внутренней отделки",
@@ -50,6 +50,6 @@ export const FUNCTIONALITY_DATA = [
       'Прочные и эстетические панели из ПВХ, МДФ или экономичная \nотделка из оргалита и вагонки класса "Б".',
       "Прочный полукоммерческий линолеум, не повредить даже гвоздем. Не \nпропускает влагу и продлевает срок службы пола.",
     ],
-    photos: require("../assets/img/Functionality/4.webp"),
+    photo: require("../assets/img/Functionality/4.webp"),
   },
 ];
