@@ -9,6 +9,7 @@ import { ModalPrice } from "../../components";
 import { ModalCloseButton } from "../../components";
 import { FunctionalityCard } from "components/FunctionalityCard/FunctionalityCard";
 import { FUNCTIONALITY_CARD_DATA } from "./../../constants/FunctionalityCardData";
+import { FunctionalityGetSolution } from "components/FunctionalityGetSolution";
 
 export const Functionality = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
@@ -79,6 +80,7 @@ export const Functionality = () => {
               },
             )}
           </div>
+      <FunctionalityGetSolution/>
         </div>
       </div>
     </div>

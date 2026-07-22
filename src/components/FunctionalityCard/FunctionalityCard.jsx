@@ -9,7 +9,8 @@ export const FunctionalityCard = ({
 }) => {
   return (
     <div className={$.functionalityCard__section}>
-      <div className={$.functionalityCard__icon}>{icon}</div>
+      <div className={$.functionalityCard__icon}>
+        {icon}</div>
       <h1 className={$.functionalityCard__headerText}>{headerText}</h1>
       <span className={$.functionalityCard__subHeaderText}>
         {subHeaderText}

@@ -9,3 +9,4 @@ export * from './IconCard';
 export * from './SolutionCatalogComponents';
 export * from './FunctionalityInfoChip';
 export * from './FunctionalityCard';
+export * from './FunctionalityGetSolution';
