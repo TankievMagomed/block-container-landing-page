@@ -7,6 +7,7 @@ import {
   PhotoGallery,
   Functionality,
   AdditionalServices,
+  Production,
 } from "sections";
 import "./styles/fonts.css";
 import "./styles/root.css";
@@ -23,6 +24,7 @@ function App() {
         <PhotoGallery />
         <Functionality/>
         <AdditionalServices/>
+        <Production />
       </div>
     </div>
   );
