@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
 
-export const ModalPriceInquiry = ({ onClose }) => {
+export const ModalPriceInquiry = ({ onClose, headerText, subHeaderText, buttonText }) => {
   const {
     register,
     handleSubmit,
@@ -34,14 +34,10 @@ export const ModalPriceInquiry = ({ onClose }) => {
       }}
     >
       <div className={$$.modalPriceInquiry__header}>
-        Получите сегодня решение,
-        <br />
-        стоимость и сроки
+        {headerText}
       </div>
       <div className={$$.modalPriceInquiry__subheader}>
-        Наши эксперты помогут выбрать лучшее решение, проконсультируют по
-        <br />
-        условиям, рассчитают стоимость и сроки
+         {subHeaderText}
       </div>
       <form
         className={$$.modalPriceInquiry__form}
@@ -60,7 +56,7 @@ export const ModalPriceInquiry = ({ onClose }) => {
           className={$.modal__submitButton}
           type={"submit"}
         >
-          Получить решение, стоимость и сроки ⟶
+          {buttonText}
         </MainButton>
         <span className={$$.modalPriceInquiry__consent}>
           Нажимая на кнопку, вы даете согласие на обработку персональных данных

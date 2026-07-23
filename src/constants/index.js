@@ -8,3 +8,4 @@ export * from "./SolutionCatalogCheckData";
 export * from "./PhotoGalleryData";
 export * from "./FunctionalityOptionsData";
 export * from "./FunctionalityCardData";
+export * from "./AdditionalServicesCardData";

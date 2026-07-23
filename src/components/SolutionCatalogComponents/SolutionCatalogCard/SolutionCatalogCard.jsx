@@ -29,7 +29,12 @@ export const SolutionCatalogCard = ({ title, photos, index, ...rest }) => {
         transitionProps={{ transition: "pop-bottom-left" }}
       >
         <FocusTrap.InitialFocus />
-        <ModalPriceInquiry onClose={handleCloseModal} />
+        <ModalPriceInquiry
+          onClose={handleCloseModal}
+          headerText={`Получите сегодня решение,\n стоимость и сроки`}
+          subHeaderText={`Наши эксперты помогут выбрать лучшее решение, проконсультируют по \nусловиям, рассчитают стоимость и сроки`}
+          buttonText={`Получить решение, стоимость и сроки ⟶`}
+        />
       </Modal>
       {isOpenPrice && <ModalCloseButton onClickButton={closePrice} />}
       <Modal

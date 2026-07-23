@@ -10,3 +10,4 @@ export * from './SolutionCatalogComponents';
 export * from './FunctionalityInfoChip';
 export * from './FunctionalityCard';
 export * from './FunctionalityGetSolution';
+export * from './AdditionalServicesCard';
