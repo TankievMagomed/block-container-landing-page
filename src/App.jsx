@@ -8,6 +8,7 @@ import {
   Functionality,
   AdditionalServices,
   Production,
+  Service,
 } from "sections";
 import "./styles/fonts.css";
 import "./styles/root.css";
@@ -22,9 +23,10 @@ function App() {
         <WhyUs />
         <SolutionCatalog />
         <PhotoGallery />
-        <Functionality/>
-        <AdditionalServices/>
+        <Functionality />
+        <AdditionalServices />
         <Production />
+        <Service />
       </div>
     </div>
   );

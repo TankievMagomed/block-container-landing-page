@@ -1,0 +1,41 @@
+.serviceChip__section {
+  display: flex;
+  flex-direction: column;
+  width: 580px;
+  background-color: #d9d9d9;
+  padding: 15px;
+}
+
+.serviceChip__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 3000px;
+  background-color: #dee2e2;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.serviceChip__icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.serviceChip__headerText {
+  line-height: 31px;
+  font-size: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  white-space: pre-line;
+  color: #1b2c50;
+}
+
+.serviceChip__subHeaderText {
+  line-height: 20px;
+  font-size: 13px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 400;
+  white-space: pre-line;
+  color: #1b2c50;
+}
