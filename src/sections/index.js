@@ -9,7 +9,7 @@ export * from "./Production";
 export * from "./Service";
 export * from "./Warranty";
 // export * from "./AboutTheCompany";
-// export * from "./Certificates";
+export * from "./Certificates";
 // export * from "./Contacts";
 // export * from "./Quality";
 // export * from "./Reviews";
