@@ -42,3 +42,29 @@
   font-weight: 500;
   margin: 0;
 }
+a.warranty__button {
+  margin-top: 60px;
+  width: 280px;
+  display: flex;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: white;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  align-items: center;
+  background-color: transparent;
+  text-decoration: none;
+}
+.warranty__button svg {
+  width: 43px;
+  height: 43px;
+  background-color: white;
+  color: black;
+  border-radius: 3000px;
+  padding: 10px;
+}

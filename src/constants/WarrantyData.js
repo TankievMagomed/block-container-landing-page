@@ -1,0 +1,1 @@
+export const WARRANTY_DATA = 'https://workspace.google.com/products/drive/'

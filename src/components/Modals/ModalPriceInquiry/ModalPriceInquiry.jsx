@@ -11,6 +11,7 @@ export const ModalPriceInquiry = ({ onClose, headerText, subHeaderText, buttonTe
   const {
     register,
     handleSubmit,
+    
     setValue,
     reset,
     formState: { errors },

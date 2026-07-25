@@ -3,10 +3,11 @@ import $ from "./AdditionalServices.module.css";
 import ContainerImage from "../../assets/img/AdditionalServices/1.jpg";
 import { MainButton } from "components/Buttons";
 import { Modal, FocusTrap } from "@mantine/core";
-import { AdditionalServicesCard, ModalPriceInquiry } from "components";
+import { AdditionalServicesCard } from "components";
 import { ModalCloseButton } from "components/Buttons";
 import { ADDITIONAL_SERVICES_CARD_DATA } from "constants";
 import { useDisclosure } from "@mantine/hooks";
+import { ModalPriceInquiry } from "components";
 
 export const AdditionalServices = () => {
   const [isOpen, { open, close }] = useDisclosure(false);

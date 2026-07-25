@@ -1,7 +1,6 @@
 import React from "react";
 import $ from "./../Modals.module.css";
-import $$ from "./ModalTR.module.css";
-import { MainInput, TextAreaInput, FileInput, PhoneInput} from "../../Inputs";
+import { MainInput, TextAreaInput, FileInput, PhoneInput } from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -75,7 +74,10 @@ export const ModalTR = ({ onClose }) => {
           <span className={$.modal__fileLabel}>
             Загрузите техническое задание, если есть:
           </span>
-          <FileInput placeholder={"Загрузите файлы"} {...register("fileTz")} />
+          <FileInput
+            placeholder={"Загрузите файлы"}
+            {...register("fileTz")}
+          />
         </div>
         {Object.keys(errors).length > 0 && (
           <div className={$.modal__formError}>
