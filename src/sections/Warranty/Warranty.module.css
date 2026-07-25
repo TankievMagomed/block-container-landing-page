@@ -1,0 +1,44 @@
+.warranty__section {
+  margin-top: 50px;
+  width: 100%;
+  height: 675px;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../assets/img/Warranty.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 90px 0px 60px 40px;
+  margin-bottom: 100px;
+}
+
+.warranty__headerText {
+  line-height: 59px;
+  color: #ffffff;
+  font-size: 38px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  margin: 0px 0px 100px 0px;
+}
+
+.warranty__subHeaderText {
+  display: block;
+  line-height: 28px;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+
+.warranty__infoText {
+  display: block;
+  line-height: 25px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  margin: 0;
+}

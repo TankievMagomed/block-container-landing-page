@@ -9,6 +9,7 @@ import {
   AdditionalServices,
   Production,
   Service,
+  Warranty,
 } from "sections";
 import "./styles/fonts.css";
 import "./styles/root.css";
@@ -27,6 +28,7 @@ function App() {
         <AdditionalServices />
         <Production />
         <Service />
+        <Warranty />
       </div>
     </div>
   );
