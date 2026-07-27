@@ -11,3 +11,4 @@ export * from "./FunctionalityCardData";
 export * from "./ServiceData";
 export * from "./AdditionalServicesCardData";
 export * from "./WarrantyData";
+export * from "./CertificatesData";

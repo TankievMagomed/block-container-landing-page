@@ -1,0 +1,25 @@
+.certificatesCard__section {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  background-color: transparent;
+  text-decoration: none;
+  gap: 20px;
+}
+
+.certificatesCard__section img {
+  height: 375px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.certificatesCard__text {
+  color: #1b2c50;
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat", Arial, sans-serif;
+}

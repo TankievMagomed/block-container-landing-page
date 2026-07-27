@@ -10,6 +10,7 @@ import {
   Production,
   Service,
   Warranty,
+  Certificates,
 } from "sections";
 import "./styles/fonts.css";
 import "./styles/root.css";
@@ -29,6 +30,7 @@ function App() {
         <Production />
         <Service />
         <Warranty />
+        <Certificates/>
       </div>
     </div>
   );
