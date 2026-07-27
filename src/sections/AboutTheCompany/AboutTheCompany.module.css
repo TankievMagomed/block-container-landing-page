@@ -1,0 +1,31 @@
+.aboutTheCompany__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+  gap: 20px;
+}
+
+.aboutTheCompany__headlineField {
+  display: flex;
+  width: 100%;
+}
+
+.aboutTheCompany__headerText {
+  width: 50%;
+  line-height: 59px;
+  color: #1b2c50;
+  font-size: 38px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.aboutTheCompany__subHeaderText {
+  width: 50%;
+  line-height: 25px;
+  color: #1b2c50;
+  font-size: 16px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+}
