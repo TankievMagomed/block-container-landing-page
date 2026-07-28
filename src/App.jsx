@@ -11,6 +11,7 @@ import {
   Service,
   Warranty,
   Certificates,
+  AboutTheCompany,
 } from "sections";
 import "./styles/fonts.css";
 import "./styles/root.css";
@@ -31,6 +32,7 @@ function App() {
         <Service />
         <Warranty />
         <Certificates/>
+        <AboutTheCompany/>
       </div>
     </div>
   );

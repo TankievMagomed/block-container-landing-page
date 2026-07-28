@@ -1,6 +1,6 @@
-export * from "./ModalPriceData"
-export * from "./CompletedProjectsData"
-export * from "./ModalReviewsData"
+export * from "./ModalPriceData";
+export * from "./CompletedProjectsData";
+export * from "./ModalReviewsData";
 export * from "./WhyUsData";
 export * from "./SolutionCatalogData";
 export * from "./ModalCertificatesData";
@@ -12,3 +12,6 @@ export * from "./ServiceData";
 export * from "./AdditionalServicesCardData";
 export * from "./WarrantyData";
 export * from "./CertificatesData";
+export * from "./AboutTheCompanyPhotoCarouselData";
+export * from "./AboutTheCompanyChipInfoData";
+export * from "./AboutTheCompanyChipIconData";

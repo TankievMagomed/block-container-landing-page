@@ -1,0 +1,9 @@
+.aboutTheCompanyPhotoCarousel__section {
+  width: 48%;
+   position: relative;
+}
+.aboutTheCompanyPhotoCarousel__img {
+  width: 100%;
+  object-fit: cover;
+  height: 315px;
+}

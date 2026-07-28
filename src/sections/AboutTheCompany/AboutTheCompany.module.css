@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 100px;
-  gap: 20px;
+  gap: 50px;
 }
 
 .aboutTheCompany__headlineField {
@@ -12,20 +12,68 @@
 }
 
 .aboutTheCompany__headerText {
-  width: 50%;
+  width: 40%;
   line-height: 59px;
   color: #1b2c50;
   font-size: 38px;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .aboutTheCompany__subHeaderText {
-  width: 50%;
+  width: 60%;
   line-height: 25px;
   color: #1b2c50;
   font-size: 16px;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 500;
+}
+
+.aboutTheCompany__contentField {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.aboutTheCompany__youTubeVideoPlayer {
+  width: 48%;
+  height: 315px;
+}
+
+.aboutTheCompany__chipInfo {
+  display: flex;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+  width: 100%;
+  height: 220px;
+  padding: 70px;
+  align-items: center;
+}
+
+.aboutTheCompany__chipInfoTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutTheCompany__chipInfoHeaderText {
+  line-height: 81px;
+  color: #1b2c50;
+  font-size: 52px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  margin: 0;
+}
+.aboutTheCompany__chipInfoSubHeaderText {
+    line-height: 23px;
+  color: #1b2c50;
+  font-size: 15px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+}
+
+.aboutTheCompany__chipsIcon{
+display: flex;
+justify-content: space-between;
 }

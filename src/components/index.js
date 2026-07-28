@@ -13,4 +13,5 @@ export * from './ServiceChip';
 export * from './FunctionalityGetSolution';
 export * from './AdditionalServicesCard';
 export * from './CertificatesCard';
+export * from './AboutTheCompanyPhotoCarousel';
 
