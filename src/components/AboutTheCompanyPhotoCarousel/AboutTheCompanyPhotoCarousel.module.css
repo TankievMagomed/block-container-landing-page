@@ -1,9 +1,15 @@
 .aboutTheCompanyPhotoCarousel__section {
-  width: 48%;
+  width: 580px;
    position: relative;
+   overflow: hidden;
+}
+
+.aboutTheCompanyPhotoCarousel__track {
+  display: flex;
 }
 .aboutTheCompanyPhotoCarousel__img {
   width: 100%;
   object-fit: cover;
   height: 315px;
+  flex-shrink: 0;
 }
