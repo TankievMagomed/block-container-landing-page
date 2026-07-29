@@ -1,17 +1,16 @@
-.modalReviews__container {
-  height: 1250px;
+.reviewsLetters__container {
   width: 1200px;
   margin: 0 auto;
   background-color: rgb(238, 233, 233);
 }
-.modalReviews__header {
+.reviewsLetters__header {
   display: flex;
   margin-top: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   gap: 30px;
 }
 
-.modalReviews__headerText {
+.reviewsLetters__headerText {
   color: #1b2c50;
   line-height: 59px;
   font-size: 38px;
@@ -21,7 +20,7 @@
   margin: 0;
 }
 
-.modalReviews__subHeaderText {
+.reviewsLetters__subHeaderText {
   color: #1b2c50;
   line-height: 28px;
   font-size: 18px;
@@ -31,7 +30,7 @@
   margin-top: 10px;
 }
 
-.modalReviews__letters {
+.reviewsLetters__letters {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -41,11 +40,11 @@
   justify-content: space-between;
 }
 
-.modalReviews__letter {
+.reviewsLetters__letter {
   display: flex;
   width: 15%;
 }
-.modalReviews__letter img {
+.reviewsLetters__letter img {
   width: 100%;
   object-fit: cover;
   /* чтобы картинка не обрезалась криво и вписалась по высоте и не растянулась */

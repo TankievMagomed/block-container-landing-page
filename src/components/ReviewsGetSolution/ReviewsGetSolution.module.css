@@ -1,0 +1,93 @@
+.reviewsGetSolution__section {
+  width: 100%;
+  display: flex;
+  height: 600px;
+  background-color: #dde2e2;
+  margin-top: 100px;
+}
+
+
+.reviewsGetSolution__section img {
+  width: 55%;
+  object-fit: cover;
+  
+}
+.reviewsGetSolution__info {
+  padding: 30px 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reviewsGetSolution__chip {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-transform: uppercase;
+  gap: 10px;
+  width: 350px;
+  height: 30px;
+  background-color: #1b2c50;
+  color: white;
+  font-size: 11px;
+  font-family: "Google Sans", Arial, sans-serif;
+  line-height: 17px;
+  font-weight: 600;
+}
+
+.reviewsGetSolution__infoHeaderText {
+  line-height: 40px;
+  color: #1b2c50;
+  font-size: 26px;
+  font-family: "Google Sans", Arial, sans-serif;
+  font-weight:600;
+  margin: 0px;
+}
+
+.reviewsGetSolution__infoSubHeaderText {
+  line-height: 25px;
+  color: #1b2c50;
+  font-size: 16px;
+  font-family: "Google Sans", Arial, sans-serif;
+  font-weight: 500;
+}
+
+.reviewsGetSolution__inputInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviewsGetSolution__textArea {
+  width: 100%;
+  padding: 17px 20px 0px;
+}
+.reviewsGetSolution__input{
+  width: 100%;
+}
+
+.reviewsGetSolution__button {
+  width: 100%;
+  height: 70px;
+  display: inline-block;
+  font-family: "Montserrat", Arial, sans-serif;
+  color:white;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 700;
+  padding: 10px 20px;
+  background-color: #1b2c50;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.reviewsGetSolution__email{
+  line-height: 20px;
+  color: #1b2c50;
+  font-size: 13px;
+  font-family: "Google Sans", Arial, sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
