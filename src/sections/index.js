@@ -11,5 +11,4 @@ export * from "./Warranty";
 export * from "./Certificates";
 export * from "./AboutTheCompany";
 export * from "./Reviews";
-// export * from "./Contacts";
-// export * from "./Quality";
+export * from "./Contacts";
