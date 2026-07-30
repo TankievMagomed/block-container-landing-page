@@ -16,3 +16,4 @@ export * from "./CertificatesCard";
 export * from "./AboutTheCompanyPhotoCarousel";
 export * from "./ReviewsGetSolution";
 export * from "./ReviewsLetters";
+export * from './ContactsInfo';

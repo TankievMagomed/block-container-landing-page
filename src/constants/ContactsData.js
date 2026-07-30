@@ -1,0 +1,1 @@
+export const CONTACTS_DATA = 'https://workspace.google.com/products/drive/'

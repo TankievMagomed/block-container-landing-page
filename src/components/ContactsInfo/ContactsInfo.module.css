@@ -1,0 +1,77 @@
+.contactsInfo__section {
+  width: 100%;
+  display: flex;
+  height: 500px;
+}
+
+.contactsInfo__textsField {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contactsInfo__textsFieldHeader {
+  line-height: 59px;
+  color: #1b2c50;
+  font-size: 38px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contactsInfo__textsFieldSubHeader {
+  line-height: 22px;
+  color: #1b2c50;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contactsInfo__textsFieldSubHeaderBoldType {
+  line-height: 22px;
+  color: #1b2c50;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.contactsInfo__textsFieldSmall {
+  line-height: 16px;
+  color: #1b2c50;
+  font-size: 10px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  margin-top: auto;
+}
+
+a.contactsInfo__button {
+  margin-bottom: 30px;
+  height: 0;
+  line-height: 22px;
+  color: #1b2c50;
+  font-size: 14px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.contactsInfo__modalButton {
+  margin-top: 30px;
+  display: inline-block;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 700;
+  padding: 10px 20px;
+  background-color: #1b2c50;
+  text-transform: uppercase;
+  height: 70px;
+  border: 0;
+  width: 260px;
+}
