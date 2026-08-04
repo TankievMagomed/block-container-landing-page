@@ -19,7 +19,7 @@ export const Contacts = () => {
         <YMaps>
           <Map
             defaultState={defaultState}
-            style={{ width: 600, height: 400 }}
+            style={{height: 400 }}
           >
             <Placemark geometry={[55.684758, 37.738521]} />
           </Map>
