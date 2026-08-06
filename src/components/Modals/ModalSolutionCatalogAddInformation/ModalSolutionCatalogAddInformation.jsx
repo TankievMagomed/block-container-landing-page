@@ -49,7 +49,7 @@ export const ModalSolutionCatalogAddInformation = ({ onClose }) => {
         onSubmit={handleSubmit(handelSubmitForm)}
       >
         <TextAreaInput
-          className={$.modal__textarea}
+          className={$$.modalSolutionCatalogAddInformation__textarea}
           placeholder={"Ваше имя"}
           {...register("tz")}
           error={errors.tz}

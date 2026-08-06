@@ -61,12 +61,14 @@ export const ContactsInfo = () => {
         <span className={$.contactsInfo__textsFieldSubHeaderBoldType}>
           ОГРН: 1175007004072 <br /> ИНН: 5042144356 <br /> <br />
         </span>
-        <MainButton
+        <a
           className={$.contactsInfo__button}
           href={CONTACTS_DATA}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Карточка предприятия ⟶
-        </MainButton>
+        </a>
         <MainButton
           className={$.contactsInfo__modalButton}
           onClickButton={() => {

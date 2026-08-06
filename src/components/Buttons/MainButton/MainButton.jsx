@@ -8,18 +8,6 @@ export const MainButton = ({
   type,
   className,
 }) => {
-  if (href) {
-    return (
-      <a
-        className={`${$.button} ${className}`}
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {children}
-      </a>
-    );
-  }
   return (
     <button
       className={`${$.button} ${className}`}

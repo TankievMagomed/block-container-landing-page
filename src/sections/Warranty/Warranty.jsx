@@ -1,7 +1,6 @@
 import React from "react";
 import $ from "./Warranty.module.css";
 import { WARRANTY_DATA } from "constants";
-import { MainButton } from "components";
 import { ReactComponent as Paper } from "../../assets/icon/paper.svg";
 
 export const Warranty = () => {
@@ -18,9 +17,14 @@ export const Warranty = () => {
         находитесь за пределами Московской области или других
         <br /> регионах — оплатим вам ремонт
       </span>
-      <MainButton className={$.warranty__button} href={WARRANTY_DATA}>
-        <Paper/> Посмотреть договор ⟶
-      </MainButton>
+      <a
+        className={$.warranty__button}
+        href={WARRANTY_DATA}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Paper /> Посмотреть договор ⟶
+      </a>
     </div>
   );
 };
