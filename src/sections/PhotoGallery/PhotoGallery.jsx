@@ -8,7 +8,7 @@ export const PhotoGallery = () => {
   const [currentIndexPhoto, setCurrentIndexPhoto] = useState(0);
   const [isFullPhoto, setIsFullPhoto] = useState(false);
   return (
-    <div className={$.photoGallery__section}>
+    <div className={$.photoGallery__section} id='photoGallery'>
       <h1 className={$.photoGallery__headerText}>
         Фотогалерея выполненных проектов <br /> для наших клиентов
       </h1>

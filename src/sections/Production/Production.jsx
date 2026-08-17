@@ -3,7 +3,7 @@ import $ from "./Production.module.css";
 
 export const Production = () => {
   return (
-    <div className={$.production__section}>
+    <div className={$.production__section} id='production'>
       <h1 className={$.production__headerText}>
         Производим до 20 блок-контейнеров в <br /> сутки на собственном
         производстве <br /> 3200м²

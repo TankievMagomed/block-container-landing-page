@@ -1,0 +1,54 @@
+.modalPanelSideMenu__section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 24px 20px 19px;
+  height: auto;
+  min-height: 100%;
+  text-align: left;
+  width: 300px;
+  transition: transform 0.3s ease;
+  background-color: #1b2c50;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modalPanelSideMenu__logo {
+  filter: brightness(0) invert(1);
+  width: 50%;
+  margin: 30px 0px;
+}
+
+.modalPanelSideMenu__buttonClose {
+  width: 30px;
+  height: 30px;
+  color: rgb(211, 202, 202);
+  cursor: pointer;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.modalPanelSideMenu__aElement {
+  font-size: 18px;
+  text-align: left;
+  background-color: #1b2c50;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-weight: 400;
+  width: 100%;
+  text-decoration: none;
+}
+
+.modalPanelSideMenu__contacts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100px;
+  margin-top: auto;
+  gap: 30px;
+}

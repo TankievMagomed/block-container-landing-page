@@ -1,0 +1,23 @@
+.sideMenu__section {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  background-color: #1b2c50;
+  opacity: 0.9;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: 20px;
+  right: 20px;
+}
+
+.sideMenu__section::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  box-shadow:
+    0 -8px 0 #fff,
+    0 8px 0 #fff;
+}

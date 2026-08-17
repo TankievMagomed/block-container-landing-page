@@ -5,7 +5,7 @@ import { ReactComponent as Paper } from "../../assets/icon/paper.svg";
 
 export const Warranty = () => {
   return (
-    <div className={$.warranty__section}>
+    <div className={$.warranty__section} id='warranty'>
       <h1 className={$.warranty__headerText}>
         Вы получите официальную <br /> расширенную гарантию на 1 год, <br />
         которую мы пропишем в договоре

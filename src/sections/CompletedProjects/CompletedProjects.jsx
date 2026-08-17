@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import $ from "./CompletedProjects.module.css";
 import AlfaGroup from "../../assets/icon/Clients/AlfaGroup.webp";
 import AviaGroup from "../../assets/icon/Clients/AviaGroup.webp";
@@ -16,8 +16,14 @@ import { MainButton } from "../../components";
 export const CompletedProjects = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
   const handleCloseModal = () => close();
+  const refImage = useRef(null);
+  useEffect(() => {
+    const image = document.getElementById("pic-pic");
+    console.log(image);
+    console.log(refImage.current);
+  }, []);
   return (
-    <div className={$.completedProjects__section}>
+    <div className={$.completedProjects__section} id='completedProjects'>
       <Modal
         fullScreen
         opened={isOpen}
@@ -44,6 +50,7 @@ export const CompletedProjects = () => {
       </span>
       <div className={$.completedProjects_logoSection}>
         <img
+          ref={refImage}
           src={Pic}
           alt="Pic"
         />

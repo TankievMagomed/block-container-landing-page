@@ -16,4 +16,7 @@ export * from "./CertificatesCard";
 export * from "./AboutTheCompanyPhotoCarousel";
 export * from "./ReviewsGetSolution";
 export * from "./ReviewsLetters";
-export * from './ContactsInfo';
+export * from "./ContactsInfo";
+export * from "./SideMenu";
+export * from "./Modals/ModalPanelSideMenu";
+export * from "./SideChipMail";

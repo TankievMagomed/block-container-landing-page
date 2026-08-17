@@ -14,7 +14,7 @@ export const AdditionalServices = () => {
   const handleCloseModal = () => close();
 
   return (
-    <div className={$.additionalServices__section}>
+    <div className={$.additionalServices__section} id='additionalServices'>
       <Modal
         opened={isOpen}
         onClose={close}

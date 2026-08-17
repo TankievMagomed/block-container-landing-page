@@ -16,3 +16,4 @@ export * from "./AboutTheCompanyPhotoCarouselData";
 export * from "./AboutTheCompanyChipInfoData";
 export * from "./AboutTheCompanyChipIconData";
 export * from "./ContactsData";
+export * from "./SideMenuData";

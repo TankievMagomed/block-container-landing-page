@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import $ from "./ProjectCarousel.module.css";
 import { ArrowButton } from "components/Buttons";
 import { FullImage } from "components/FullImage";
 
-export const ProjectCarousel = ({ title, photos, ...rest }) => {
+export const ProjectCarousel = memo(({ title, photos, ...rest }) => {
   const [currentIndexPhoto, setCurrentIndexPhoto] = useState(0);
   const [isFullPhoto, setIsFullPhoto] = useState(false);
+
   return (
     <div className={$.projectCarousel}>
       <div className={$.projectCarousel__photoBox}>
@@ -48,4 +49,4 @@ export const ProjectCarousel = ({ title, photos, ...rest }) => {
       )}
     </div>
   );
-};
+});

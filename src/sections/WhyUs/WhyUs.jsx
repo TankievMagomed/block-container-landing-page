@@ -11,7 +11,10 @@ export const WhyUs = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
   const handleCloseModal = () => close();
   return (
-    <div className={$.whyUs__section}>
+    <div
+      className={$.whyUs__section}
+      id="whyUs"
+    >
       <Modal
         opened={isOpen}
         onClose={close}
@@ -34,14 +37,14 @@ export const WhyUs = () => {
       </span>
       <div className={$.whyUs__cardsPrinciples}>
         {WHY_US_DATA.map(({ title, number }) => {
-                  return (
-                    <IconCard
-                      title={title}
-                      icon={number}
-                      key={title}
-                    />
-                  );
-                })}
+          return (
+            <IconCard
+              title={title}
+              icon={number}
+              key={title}
+            />
+          );
+        })}
       </div>
       <div className={$.whyUs__buttonFiled}>
         <MainButton

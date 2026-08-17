@@ -5,7 +5,7 @@ import { CertificatesCard } from "components";
 
 export const Certificates = () => {
   return (
-    <div className={$.certificates__section}>
+    <div className={$.certificates__section} id='certificates'>
       <h1 className={$.certificates__headerText}>
         Сертификаты соответствия на изготовление <br /> блок‑контейнеров и
         комплектующие

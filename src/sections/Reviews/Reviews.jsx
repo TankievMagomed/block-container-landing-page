@@ -4,7 +4,7 @@ import { ReviewsLetters, ReviewsGetSolution } from "components";
 
 export const Reviews = () => {
   return (
-      <div className={$.reviews__section}>
+      <div className={$.reviews__section} id='reviews'>
         <ReviewsLetters/>
       <ReviewsGetSolution />
     </div>

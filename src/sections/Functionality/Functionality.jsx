@@ -15,7 +15,7 @@ export const Functionality = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
   const handleCloseModal = () => close();
   return (
-    <div className={$.functionality__section}>
+    <div className={$.functionality__section} id='functionality'>
       <Modal
         opened={isOpen}
         onClose={close}

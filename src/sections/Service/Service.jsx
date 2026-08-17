@@ -5,7 +5,7 @@ import { ServiceChip } from "components";
 
 export const Service = () => {
   return (
-    <div className={$.service__section}>
+    <div className={$.service__section} id='service'>
       <h1 className={$.service__headerText}>
         Ответсвтенный и надежный партнер <br /> — ваш ключ к успеху
       </h1>
