@@ -47,9 +47,10 @@ export const AdditionalServices = () => {
         </span>
         <div className={$.additionalServices__principlesCards}>
           {ADDITIONAL_SERVICES_CARD_DATA.map(
-            ({ icon, headerText, subHeaderText }) => {
+            ({ icon, headerText, subHeaderText }, index) => {
               return (
                 <AdditionalServicesCard
+                key={index}
                   icon={icon}
                   headerText={headerText}
                   subHeaderText={subHeaderText}

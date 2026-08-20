@@ -5,10 +5,6 @@
   color: #000000;
 }
 
-.modalPrice__spanUnderline {
-  text-decoration: underline;
-}
-
 .modalPrice__checkbox {
   display: flex;
   flex-direction: column;

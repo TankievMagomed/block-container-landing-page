@@ -7,7 +7,10 @@ import { ServiceChip } from "components";
 
 export const AboutTheCompany = () => {
   return (
-    <div className={$.aboutTheCompany__section} id="aboutTheCompany">
+    <div
+      className={$.aboutTheCompany__section}
+      id="aboutTheCompany"
+    >
       <div className={$.aboutTheCompany__headlineField}>
         <h1 className={$.aboutTheCompany__headerText}> О компании</h1>
         <span className={$.aboutTheCompany__subHeaderText}>
@@ -30,9 +33,12 @@ export const AboutTheCompany = () => {
       </div>
       <div className={$.aboutTheCompany__chipInfo}>
         {ABOUT_THE_COMPANY_CHIP_INFO_DATA.map(
-          ({ headerText, subHeaderText }) => {
+          ({ headerText, subHeaderText }, index) => {
             return (
-              <div className={$.aboutTheCompany__chipInfoTexts}>
+              <div
+                className={$.aboutTheCompany__chipInfoTexts}
+                key={index}
+              >
                 <h1 className={$.aboutTheCompany__chipInfoHeaderText}>
                   {headerText}
                 </h1>
@@ -46,9 +52,10 @@ export const AboutTheCompany = () => {
       </div>
       <div className={$.aboutTheCompany__chipsIcon}>
         {ABOUT_THE_COMPANY_CHIP_ICON_DATA.map(
-          ({ icon, headerText, subHeaderText }) => {
+          ({ icon, headerText, subHeaderText }, index) => {
             return (
               <ServiceChip
+                key={index}
                 icon={icon}
                 headerText={headerText}
                 subHeaderText={subHeaderText}

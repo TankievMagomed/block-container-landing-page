@@ -6,27 +6,3 @@
   gap: 50px;
 }
 
-.reviews__headlineField {
-  display: flex;
-  width: 100%;
-}
-
-.reviews__headerText {
-  width: 40%;
-  line-height: 59px;
-  color: #1b2c50;
-  font-size: 38px;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.reviews__subHeaderText {
-  width: 60%;
-  line-height: 25px;
-  color: #1b2c50;
-  font-size: 16px;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: 500;
-}

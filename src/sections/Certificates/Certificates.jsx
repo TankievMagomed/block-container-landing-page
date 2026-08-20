@@ -6,7 +6,7 @@ import { CertificatesCard } from "components";
 export const Certificates = () => {
   return (
     <div className={$.certificates__section} id='certificates'>
-      <h1 className={$.certificates__headerText}>
+      <h1 className={`sectionHeaderText ${$.certificates__headerText}`}>
         Сертификаты соответствия на изготовление <br /> блок‑контейнеров и
         комплектующие
       </h1>
@@ -14,9 +14,10 @@ export const Certificates = () => {
         Будьте спокойны за качество продукта и <br /> уверены в результате
       </span>
       <div className={$.certificates__chipsField}>
-        {CERTIFICATES_DATA.map(({ title, photo, url }) => {
+        {CERTIFICATES_DATA.map(({ title, photo, url }, index) => {
           return (
             <CertificatesCard
+            key={index}
               title={title}
               photo={photo}
               href={url}

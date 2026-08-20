@@ -19,9 +19,9 @@ export const FunctionalityInfoChip = ({
           {subHeaderText}
         </span>
         <div className={$.functionalityInfoChip__infoTextField}>
-          {infoText.map((text) => {
+          {infoText.map((text, index) => {
             return (
-              <span className={$.functionalityInfoChip__infoText}>{text}</span>
+              <span key={index} className={$.functionalityInfoChip__infoText}>{text}</span>
             );
           })}
         </div>

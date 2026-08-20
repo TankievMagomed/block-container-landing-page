@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import $ from "./CompletedProjects.module.css";
 import AlfaGroup from "../../assets/icon/Clients/AlfaGroup.webp";
 import AviaGroup from "../../assets/icon/Clients/AviaGroup.webp";
@@ -17,13 +17,11 @@ export const CompletedProjects = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
   const handleCloseModal = () => close();
   const refImage = useRef(null);
-  useEffect(() => {
-    const image = document.getElementById("pic-pic");
-    console.log(image);
-    console.log(refImage.current);
-  }, []);
   return (
-    <div className={$.completedProjects__section} id='completedProjects'>
+    <div
+      className={$.completedProjects__section}
+      id="completedProjects"
+    >
       <Modal
         fullScreen
         opened={isOpen}
@@ -38,7 +36,7 @@ export const CompletedProjects = () => {
         <FocusTrap.InitialFocus />
         <ModalReviews handleCloseModal={handleCloseModal} />
       </Modal>
-      <h1 className={$.completedProjects__headerText}>
+      <h1 className={`sectionHeaderText ${$.completedProjects__headerText}`}>
         Нам доверили реализацию своих проектов
         <br />
         уже более 1250 компаний по всей России

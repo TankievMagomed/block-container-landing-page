@@ -77,7 +77,6 @@ export const ReviewsGetSolution = () => {
           />
           <MainButton
             className={$.reviewsGetSolution__button}
-            onClickButton={() => {}}
           >
             Получить решение
           </MainButton>

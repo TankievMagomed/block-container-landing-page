@@ -1,8 +1,8 @@
 import React from 'react';
 import $ from './FileInput.module.css';
 
-export const FileInput = ({placeholder, ...rest}) => {
+export const FileInput = ({...rest}) => {
   return (
-    <input className={$.input__fileUpload} placeholder={placeholder} type="file" {...rest} />
+    <input className={$.input__fileUpload} type="file" {...rest} />
   )
 }

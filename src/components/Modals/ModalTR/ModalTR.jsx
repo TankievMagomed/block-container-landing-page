@@ -75,7 +75,6 @@ export const ModalTR = ({ onClose }) => {
             Загрузите техническое задание, если есть:
           </span>
           <FileInput
-            placeholder={"Загрузите файлы"}
             {...register("fileTz")}
           />
         </div>

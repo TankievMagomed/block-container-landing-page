@@ -44,7 +44,7 @@ export const ProjectCarousel = memo(({ title, photos, ...rest }) => {
           title={title}
           onClose={() => setIsFullPhoto(false)}
           initialIndex={currentIndexPhoto}
-          colorModalCloseButton={"#000"}
+          modalCloseButtonColor={"#000"}
         />
       )}
     </div>

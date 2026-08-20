@@ -29,7 +29,7 @@ export const Functionality = () => {
         <ModalPrice onClose={handleCloseModal} />
       </Modal>
       {isOpen && <ModalCloseButton onClickButton={close} />}
-      <h1 className={$.functionality__headerText}>
+      <h1 className={`sectionHeaderText ${$.functionality__headerText}`}>
         Варианты планировок, внутреннего <br /> снабжения и отделки
       </h1>
       <span className={$.functionality__subHeaderText}>
@@ -46,6 +46,7 @@ export const Functionality = () => {
                 photo={photo}
                 infoText={infoText}
                 index={index}
+                key={index}
               />
             );
           },
@@ -69,9 +70,10 @@ export const Functionality = () => {
           </h1>
           <div className={$.functionality__principlesCards}>
             {FUNCTIONALITY_CARD_DATA.map(
-              ({ icon, headerText, subHeaderText }) => {
+              ({ icon, headerText, subHeaderText }, index) => {
                 return (
                   <FunctionalityCard
+                  key={index}
                     icon={icon}
                     headerText={headerText}
                     subHeaderText={subHeaderText}

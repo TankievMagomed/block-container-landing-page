@@ -84,10 +84,7 @@ export const SolutionCatalogGetSolution = () => {
                 Пожалуйста, заполните все обязательные поля
               </div>
             )}
-            <MainButton
-              className={$.solutionCatalogGetSolution__button}
-              onClickButton={() => {}}
-            >
+            <MainButton className={$.solutionCatalogGetSolution__button}>
               Получить решение
             </MainButton>
           </form>

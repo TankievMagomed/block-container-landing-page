@@ -32,7 +32,7 @@ export const AboutTheCompanyPhotoCarousel = () => {
 
   return ABOUT_THE_COMPANY_PHOTO_CAROUSEL_DATA.map(({ photo }, index) => {
     return (
-      <div className={$.aboutTheCompanyPhotoCarousel__section}>
+      <div className={$.aboutTheCompanyPhotoCarousel__section} key={index}>
         <ArrowButton
           direction="left"
           onClickButton={() => {

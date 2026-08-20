@@ -28,7 +28,10 @@ export const WhyUs = () => {
         <ModalPrice onClose={handleCloseModal} />
       </Modal>
       {isOpen && <ModalCloseButton onClickButton={close} />}
-      <h1 className={$.whyUs__headerText}> Почему выбирают нас?</h1>
+      <h1 className={`sectionHeaderText ${$.whyUs__headerText}`}>
+        {" "}
+        Почему выбирают нас?
+      </h1>
       <span className={$.whyUs__subHeaderTextFirstLine}>
         Скорость, на которую можно положиться,
       </span>

@@ -5,8 +5,11 @@ import { ServiceChip } from "components";
 
 export const Service = () => {
   return (
-    <div className={$.service__section} id='service'>
-      <h1 className={$.service__headerText}>
+    <div
+      className={$.service__section}
+      id="service"
+    >
+      <h1 className={`sectionHeaderText ${$.service__headerText}`}>
         Ответсвтенный и надежный партнер <br /> — ваш ключ к успеху
       </h1>
       <span className={$.service__subHeaderText}>
@@ -15,9 +18,10 @@ export const Service = () => {
         <br /> подверждается паспортом изделия
       </span>
       <div className={$.service__chips}>
-        {SERVICE_DATA.map(({ icon, headerText, subHeaderText }) => {
+        {SERVICE_DATA.map(({ icon, headerText, subHeaderText }, index) => {
           return (
             <ServiceChip
+              key={index}
               icon={icon}
               headerText={headerText}
               subHeaderText={subHeaderText}

@@ -5,11 +5,15 @@ import { SolutionCatalogCard } from "components/SolutionCatalogComponents";
 import { SolutionCatalogAddInformation } from "components/SolutionCatalogComponents";
 import { SolutionCatalogGetSolution } from "components/SolutionCatalogComponents/SolutionCatalogGetSolution/SolutionCatalogGetSolution";
 
-
 export const SolutionCatalog = () => {
   return (
-    <div className={$.solutionCatalog__section} id="solutionCatalog">
-      <h1 className={$.solutionCatalog__headerText}>Каталог типовых решений</h1>
+    <div
+      className={$.solutionCatalog__section}
+      id="solutionCatalog"
+    >
+      <h1 className={`sectionHeaderText ${$.solutionCatalog__headerText}`}>
+        Каталог типовых решений
+      </h1>
       <span className={$.solutionCatalog__subHeaderText}>
         Большой выбор блок-контейнеров по функционалу, размерам,
         <br />
@@ -27,8 +31,8 @@ export const SolutionCatalog = () => {
           );
         })}
       </div>
-      <SolutionCatalogAddInformation/>
-      <SolutionCatalogGetSolution/>
+      <SolutionCatalogAddInformation />
+      <SolutionCatalogGetSolution />
     </div>
   );
 };

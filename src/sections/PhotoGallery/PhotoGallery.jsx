@@ -9,7 +9,7 @@ export const PhotoGallery = () => {
   const [isFullPhoto, setIsFullPhoto] = useState(false);
   return (
     <div className={$.photoGallery__section} id='photoGallery'>
-      <h1 className={$.photoGallery__headerText}>
+      <h1 className={`sectionHeaderText ${$.photoGallery__headerText}`}>
         Фотогалерея выполненных проектов <br /> для наших клиентов
       </h1>
       <span className={$.photoGallery__subHeaderText}>
@@ -19,7 +19,7 @@ export const PhotoGallery = () => {
       <div className={$.photoGallery__carousel}>
         {PHOTO_GALLERY_DATA.map(({ photo }, index) => {
           return (
-            <div className={$.photoGallery__carouselPhoto}>
+            <div className={$.photoGallery__carouselPhoto} key={index}>
               <ArrowButton
                 direction="left"
                 onClickButton={() => {
