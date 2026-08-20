@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import $ from "./../Modals.module.css";
 import { MainInput, TextAreaInput, FileInput, PhoneInput } from "../../Inputs";
 import { MainButton } from "../../Buttons/MainButton";
@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
 
 export const ModalTR = ({ onClose }) => {
+  const [isSendError, setIsSendError] = useState(false);
   const {
     register,
     handleSubmit,
@@ -20,9 +21,23 @@ export const ModalTR = ({ onClose }) => {
     resolver: yupResolver(schema),
   });
 
-  const handelSubmitForm = (data) => {
-    reset();
-    onClose();
+  const handelSubmitForm = async (data) => {
+    try {
+      const response = await fetch("http://localhost:4000/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) {
+        throw new Error("Ошибка сервера");
+      } else {
+        reset();
+        onClose();
+        setIsSendError(false);
+      }
+    } catch (error) {
+      setIsSendError(true);
+    }
   };
 
   return (
@@ -74,13 +89,16 @@ export const ModalTR = ({ onClose }) => {
           <span className={$.modal__fileLabel}>
             Загрузите техническое задание, если есть:
           </span>
-          <FileInput
-            {...register("fileTz")}
-          />
+          <FileInput {...register("fileTz")} />
         </div>
         {Object.keys(errors).length > 0 && (
           <div className={$.modal__formError}>
             Пожалуйста, заполните все обязательные поля
+          </div>
+        )}
+        {isSendError && (
+          <div className={$.modal__formError}>
+            Ошибка сервера, попробуйте отправить еще раз
           </div>
         )}
         <MainButton

@@ -92,4 +92,17 @@
   text-align: center;
 }
 
-
+.reviewsGetSolution__serverError {
+  color: white;
+  background-color: #f95d51;
+  border-color: red;
+  font-size: 15px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 300;
+  padding: 0 20px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

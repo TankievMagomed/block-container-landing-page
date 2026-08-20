@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import $ from "./ReviewsGetSolution.module.css";
 import Containers from "../../assets/img/Reviews/containers.png";
 import { MainButton } from "components/Buttons";
@@ -10,6 +10,7 @@ import { schema } from "./yupSchema";
 import { TextAreaInput } from "components/Inputs";
 
 export const ReviewsGetSolution = () => {
+  const [isSendError, setIsSendError] = useState(false);
   const {
     register,
     handleSubmit,
@@ -24,9 +25,26 @@ export const ReviewsGetSolution = () => {
     resolver: yupResolver(schema),
   });
 
-  const handelSubmitForm = useCallback(() => {
-    reset();
-  }, [reset]);
+  const handelSubmitForm = useCallback(
+    async (data) => {
+      try {
+        const response = await fetch("http://localhost:4000/api/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+          throw new Error("Ошибка сервера");
+        } else {
+          reset();
+          setIsSendError(false);
+        }
+      } catch (error) {
+        setIsSendError(true);
+      }
+    },
+    [reset],
+  );
   const handleSubmitFormForReactHookForm = handleSubmit(handelSubmitForm);
 
   return (
@@ -75,9 +93,12 @@ export const ReviewsGetSolution = () => {
             error={errors.tz}
             errorMessage={"Обязательное поле (минимум 2 символа)"}
           />
-          <MainButton
-            className={$.reviewsGetSolution__button}
-          >
+          {isSendError && (
+            <div className={$.reviewsGetSolution__serverError}>
+              Ошибка сервера, попробуйте отправить еще раз
+            </div>
+          )}
+          <MainButton className={$.reviewsGetSolution__button}>
             Получить решение
           </MainButton>
         </form>

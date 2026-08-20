@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useState, useCallback } from "react";
 import $ from "./SolutionCatalogGetSolution.module.css";
 import Boss from "../../../assets/img/SolutionCatalog/BigBoss.png";
 import { MainButton } from "components/Buttons";
@@ -11,6 +11,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
 
 export const SolutionCatalogGetSolution = () => {
+  const [isSendError, setIsSendError] = useState(false);
   const {
     register,
     handleSubmit,
@@ -25,9 +26,26 @@ export const SolutionCatalogGetSolution = () => {
     resolver: yupResolver(schema),
   });
 
-  const handelSubmitForm = useCallback(() => {
-    reset();
-  }, [reset]);
+  const handelSubmitForm = useCallback(
+    async (data) => {
+      try {
+        const response = await fetch("http://localhost:4000/api/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+          throw new Error("Ошибка сервера");
+        } else {
+          reset();
+          setIsSendError(false);
+        }
+      } catch (error) {
+        setIsSendError(true);
+      }
+    },
+    [reset],
+  );
   const handleSubmitFormForReactHookForm = handleSubmit(handelSubmitForm);
 
   return (
@@ -84,6 +102,11 @@ export const SolutionCatalogGetSolution = () => {
                 Пожалуйста, заполните все обязательные поля
               </div>
             )}
+            {isSendError && (
+            <div className={$.solutionCatalogGetSolution__formError}>
+              Ошибка сервера, попробуйте отправить еще раз
+            </div>
+          )}
             <MainButton className={$.solutionCatalogGetSolution__button}>
               Получить решение
             </MainButton>

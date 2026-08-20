@@ -10,6 +10,7 @@ import { schema } from "./yupSchema";
 import { MODAL_PRICE_DATA } from "../../../constants";
 
 export const ModalPrice = ({ onClose }) => {
+  const [isSendError, setIsSendError] = useState(false);
   const {
     register,
     handleSubmit,
@@ -24,10 +25,27 @@ export const ModalPrice = ({ onClose }) => {
     resolver: yupResolver(schema),
   });
 
-  const handelSubmitForm = useCallback(() => {
-    reset();
-    onClose();
-  }, [reset, onClose]);
+  const handelSubmitForm = useCallback(
+    async (data) => {
+      try {
+        const response = await fetch("http://localhost:4000/api/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+          throw new Error("Ошибка сервера");
+        } else {
+          reset();
+          onClose();
+          setIsSendError(false);
+        }
+      } catch (error) {
+        setIsSendError(true);
+      }
+    },
+    [reset, onClose],
+  );
 
   const handleSubmitFormForReactHookForm = handleSubmit(handelSubmitForm);
 
@@ -124,6 +142,11 @@ export const ModalPrice = ({ onClose }) => {
         {Object.keys(errors).length > 0 && (
           <div className={$.modal__formError}>
             Пожалуйста, заполните обязательные поля
+          </div>
+        )}
+        {isSendError && (
+          <div className={$.modal__formError}>
+            Ошибка сервера, попробуйте отправить еще раз
           </div>
         )}
         <MainButton
