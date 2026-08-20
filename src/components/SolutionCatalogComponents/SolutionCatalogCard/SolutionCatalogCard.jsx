@@ -49,7 +49,7 @@ export const SolutionCatalogCard = ({ title, photos, index, ...rest }) => {
         styles={{ body: { backgroundColor: "rgb(238, 233, 233)", padding: 0 } }}
       >
         <FocusTrap.InitialFocus />
-        <ModalCertificates onClose={handleCloseModal} />
+        <ModalCertificates  />
       </Modal>
       {isOpenModalInfo && (
         <ModalCloseButton

@@ -130,7 +130,6 @@ export const ModalPrice = ({ onClose }) => {
               )}
             </div>
           </div>
-          {/* Застилизовать */}
           {!!errors.modules && <span>{errors.modules.message}</span>}
         </div>
         <TextAreaInput

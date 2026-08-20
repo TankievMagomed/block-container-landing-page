@@ -10,20 +10,23 @@ export const Contacts = () => {
   };
 
   return (
-    <div className={$.contacts__section} id='contacts'>
+    <div
+      className={$.contacts__section}
+      id="contacts"
+    >
       <h1 className={$.contacts__headerText}>
         Центральный офис и производство находятся в <br /> г. Люберцы Московской
         области
       </h1>
       <div className={$.contacts__map}>
-        {/* <YMaps>
+        <YMaps>
           <Map
             defaultState={defaultState}
-            style={{height: 400 }}
+            style={{ height: 400 }}
           >
-            <Placemark geometry={[55.684758, 37.738521]} />
+            <Placemark geometry={[55.751574, 37.573856]} />
           </Map>
-        </YMaps> */}
+        </YMaps>
       </div>
       <ContactsInfo />
     </div>

@@ -21,7 +21,7 @@ export const AboutTheCompany = () => {
       </div>
       <div className={$.aboutTheCompany__contentField}>
         <AboutTheCompanyPhotoCarousel />
-        {/* <iframe
+        <iframe
           className={$.aboutTheCompany__youTubeVideoPlayer}
           src="https://www.youtube.com/embed/jU8XHVsoAWI?si=UYK30Q0hvvLmK2GV"
           title="YouTube video player"
@@ -29,7 +29,7 @@ export const AboutTheCompany = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
-        ></iframe> */}
+        ></iframe>
       </div>
       <div className={$.aboutTheCompany__chipInfo}>
         {ABOUT_THE_COMPANY_CHIP_INFO_DATA.map(
