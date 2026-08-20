@@ -112,6 +112,7 @@ export const ModalPrice = ({ onClose }) => {
             <div className={$$.modalPrice__checkboxCustomOption}>
               <Checkbox
                 {...registerCustomModule}
+                value={'custom'}
                 onChange={(event) => {
                   registerCustomModule.onChange(event);
                   setCheckbox((prev) => !prev);

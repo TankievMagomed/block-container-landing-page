@@ -15,9 +15,11 @@ export const schema = yup
 
     tz: yup.string().required("Поле обязательно для заполения").min(5),
     modules: yup.array().min(1, "Поле обязательно для заполения"),
-    customOption: yup
-      .string()
-      .required("Поле обязательно для заполения")
-      .min(1),
+    customOption: yup.string().when("modules", {
+      is: (modules) => modules?.includes("custom"),
+      then: (schema) =>
+        schema.required("Поле обязательно для заполения").min(1),
+      otherwise: (schema) => schema.notRequired(),
+    }),
   })
   .required();
