@@ -53,6 +53,11 @@ export const ModalPriceInquiry = ({ onClose, headerText, subHeaderText, buttonTe
           setValue={setValue}
           fieldName="telephone"
         />
+        {Object.keys(errors).length > 0 && (
+          <div className={$.modal__formError}>
+            Пожалуйста, заполните все обязательные поля
+          </div>
+        )}
         <MainButton
           className={$.modal__submitButton}
           type={"submit"}

@@ -69,9 +69,7 @@ export const SolutionCatalogGetSolution = () => {
               );
             })}
           </div>
-          <form
-            onSubmit={handleSubmitFormForReactHookForm}
-          >
+          <form onSubmit={handleSubmitFormForReactHookForm}>
             <PhoneInput
               className={$.solutionCatalogGetSolution__input}
               placeholder={"Ваш телефон"}
@@ -81,6 +79,11 @@ export const SolutionCatalogGetSolution = () => {
               setValue={setValue}
               fieldName="telephone"
             />
+            {Object.keys(errors).length > 0 && (
+              <div className={$.solutionCatalogGetSolution__formError}>
+                Пожалуйста, заполните все обязательные поля
+              </div>
+            )}
             <MainButton
               className={$.solutionCatalogGetSolution__button}
               onClickButton={() => {}}

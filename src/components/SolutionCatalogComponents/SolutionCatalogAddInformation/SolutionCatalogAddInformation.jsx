@@ -5,6 +5,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
 import { ModalSolutionCatalogAddInformation } from "components/Modals/ModalSolutionCatalogAddInformation/ModalSolutionCatalogAddInformation";
 import { MainButton } from "components/Buttons";
+import { ModalCloseButton } from "components/Buttons";
 
 export const SolutionCatalogAddInformation = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
@@ -23,6 +24,7 @@ export const SolutionCatalogAddInformation = () => {
         <FocusTrap.InitialFocus />
         <ModalSolutionCatalogAddInformation onClose={handleCloseModal} />
       </Modal>
+        {isOpen && <ModalCloseButton onClickButton={close} />}
       <img
         src={Box}
         alt="Box"
