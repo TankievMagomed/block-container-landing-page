@@ -1,26 +1,22 @@
-.modalPanelSideMenu__section {
-  position: fixed;
-  top: 0;
-  right: 0;
+.panelSideMenu__section {
   box-sizing: border-box;
   padding: 24px 20px 19px;
   height: auto;
-  min-height: 100%;
+  min-height: 100vh;
   text-align: left;
-  width: 300px;
   transition: transform 0.3s ease;
   background-color: #1b2c50;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
-.modalPanelSideMenu__logo {
+.panelSideMenu__logo {
   filter: brightness(0) invert(1);
   width: 50%;
   margin: 30px 0px;
 }
 
-.modalPanelSideMenu__buttonClose {
+.panelSideMenu__buttonClose {
   width: 30px;
   height: 30px;
   color: rgb(211, 202, 202);
@@ -33,7 +29,18 @@
   right: 20px;
   z-index: 1000;
 }
-.modalPanelSideMenu__aElement {
+
+.panelSideMenu__aElements{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+
+
+.panelSideMenu__aElement {
   font-size: 18px;
   text-align: left;
   background-color: #1b2c50;
@@ -44,11 +51,10 @@
   text-decoration: none;
 }
 
-.modalPanelSideMenu__contacts {
+.panelSideMenu__contacts {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100px;
-  margin-top: auto;
   gap: 30px;
 }
