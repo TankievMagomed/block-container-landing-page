@@ -5,7 +5,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
 import { ModalTR } from "../Modals";
 import { ModalCloseButton } from "components/Buttons";
-import { CONTACTS_DATA } from "constants";
+import { CONTACTS_DATA, CONTACTS } from "constants";
 
 export const ContactsInfo = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
@@ -41,11 +41,11 @@ export const ContactsInfo = () => {
           Остались вопросы или нужна <br /> дополнительная информация?
         </span>
         <span className={$.contactsInfo__textsFieldSubHeaderBoldType}>
-          +7 (499) 112-44-31 <br /> pr@bk-resurs.ru <br /> <br /> <br /> <br />{" "}
+          {CONTACTS.phone} <br /> {CONTACTS.email} <br /> <br /> <br /> <br />{" "}
           <br /> Адрес офиса и производства:
         </span>
         <span className={$.contactsInfo__textsFieldSubHeader}>
-          г. Люберцы, ул. Котельнический проезд <br /> 27А. <br /> <br /> На
+          {CONTACTS.addressLine1} <br /> {CONTACTS.addressLine2} <br /> <br /> На
           связи пн-пт с 09:00 до 18:00. <br /> Производство работает без
           выходных
         </span>

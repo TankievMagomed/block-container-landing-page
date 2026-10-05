@@ -7,6 +7,7 @@ import { Checkbox } from "../../Inputs";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
+import { submitForm } from "api";
 import { MODAL_PRICE_DATA } from "../../../constants";
 
 export const ModalPrice = ({ onClose }) => {
@@ -28,11 +29,7 @@ export const ModalPrice = ({ onClose }) => {
   const handelSubmitForm = useCallback(
     async (data) => {
       try {
-        const response = await fetch("http://localhost:4000/api/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
+        const response = await submitForm(data);
         if (!response.ok) {
           throw new Error("Ошибка сервера");
         } else {

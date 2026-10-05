@@ -1,0 +1,11 @@
+.demoBanner {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 16px;
+  background-color: #1b2c50;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}

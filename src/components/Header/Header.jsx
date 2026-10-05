@@ -7,6 +7,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
 import { ModalTR } from "../Modals";
 import { ModalCloseButton } from "components/Buttons";
+import { CONTACTS } from "constants";
 
 export const Header = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
@@ -39,16 +40,16 @@ export const Header = () => {
       <div className={$.header__address}>
         <Location width={17} />
         <span>
-          АДРЕС:Г.ЛЮБЕРЦЫ, УЛ.
+          АДРЕС: {CONTACTS.addressLine1.toUpperCase()}
           <br />
-          КОТЕЛЬНИЧЕСКИЙ ПРОЕЗД 27А.
+          {CONTACTS.addressLine2.toUpperCase()}
         </span>
       </div>
       <div className={$.header__contacts}>
         <span>
-          +7 (499) 112-44-31
+          {CONTACTS.phone}
           <br />
-          pr@bk-resurs.ru
+          {CONTACTS.email}
         </span>
         <MainButton
           onClickButton={() => {

@@ -15,8 +15,7 @@ export const Contacts = () => {
       id="contacts"
     >
       <h1 className={$.contacts__headerText}>
-        Центральный офис и производство находятся в <br /> г. Люберцы Московской
-        области
+        Центральный офис и производство находятся в <br /> г. Москве
       </h1>
       <div className={$.contacts__map}>
         <YMaps>

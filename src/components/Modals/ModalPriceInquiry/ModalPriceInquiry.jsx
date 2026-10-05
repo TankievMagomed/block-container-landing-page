@@ -6,6 +6,7 @@ import { MainButton } from "../../Buttons/MainButton";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
+import { submitForm } from "api";
 
 export const ModalPriceInquiry = ({ onClose, headerText, subHeaderText, buttonText }) => {
    const [isSendError, setIsSendError] = useState(false);
@@ -25,11 +26,7 @@ export const ModalPriceInquiry = ({ onClose, headerText, subHeaderText, buttonTe
 
   const handelSubmitForm = async (data) => {
     try {
-      const response = await fetch("http://localhost:4000/api/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
+      const response = await submitForm(data);
       if (!response.ok) {
         throw new Error("Ошибка сервера");
       } else {

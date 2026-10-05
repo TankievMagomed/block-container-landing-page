@@ -4,6 +4,7 @@ import { SIDE_MENU_DATA } from "constants";
 import Logo from "../../assets/icon/logo.png";
 import { ModalCloseButton } from "components/Buttons";
 import { Drawer } from "@mantine/core";
+import { CONTACTS } from "constants";
 
 export const PanelSideMenu = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
@@ -47,16 +48,16 @@ export const PanelSideMenu = ({ isMenuOpen, setIsMenuOpen }) => {
 
       <div className={$.panelSideMenu__contacts}>
         <a
-          href="tel:+74991124431"
+          href={CONTACTS.phoneHref}
           className={$.panelSideMenu__aElement}
         >
-          +74991124431
+          {CONTACTS.phone}
         </a>
         <a
-          href="mailto:pr@bk-resurs.ru"
+          href={CONTACTS.emailHref}
           className={$.panelSideMenu__aElement}
         >
-          pr@bk-resurs.ru
+          {CONTACTS.email}
         </a>
       </div>
     </Drawer>

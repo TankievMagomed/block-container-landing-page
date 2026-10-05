@@ -20,3 +20,4 @@ export * from "./ContactsInfo";
 export * from "./SideMenu";
 export * from "./PanelSideMenu";
 export * from "./SideChipMail";
+export * from "./DemoBanner";

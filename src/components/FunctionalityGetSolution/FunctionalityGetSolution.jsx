@@ -9,6 +9,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { Modal, FocusTrap } from "@mantine/core";
 import { ModalTR } from "../Modals";
 import { ModalCloseButton } from "components/Buttons";
+import { CONTACTS } from "constants";
 
 export const FunctionalityGetSolution = () => {
   const [isOpen, { open, close }] = useDisclosure(false);
@@ -71,7 +72,7 @@ export const FunctionalityGetSolution = () => {
             Получить стоимость и сроки
           </MainButton>
         <span className={$.functionalityGetSolution__email}>
-          Или отправьте запрос на почту: pro@bk-resurs.ru
+          Или отправьте запрос на почту: {CONTACTS.email}
         </span>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import $ from "./SideChipMail.module.css";
 import { ReactComponent as Mail } from "../../assets/icon/mail.svg";
+import { CONTACTS } from "constants";
 
 export const SideChipMail = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,10 +17,10 @@ export const SideChipMail = () => {
   return (
     isVisible && (
       <a
-        href="mailto:pr@bk-resurs.ru"
+        href={CONTACTS.emailHref}
         className={$.sideChipMail__section}
       >
-        <Mail /> pr@bk-resurs.ru
+        <Mail /> {CONTACTS.email}
       </a>
     )
   );

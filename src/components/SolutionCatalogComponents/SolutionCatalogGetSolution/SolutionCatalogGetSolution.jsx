@@ -9,6 +9,8 @@ import { PhoneInput } from "components/Inputs";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./yupSchema";
+import { submitForm } from "api";
+import { CONTACTS } from "constants";
 
 export const SolutionCatalogGetSolution = () => {
   const [isSendError, setIsSendError] = useState(false);
@@ -29,11 +31,7 @@ export const SolutionCatalogGetSolution = () => {
   const handelSubmitForm = useCallback(
     async (data) => {
       try {
-        const response = await fetch("http://localhost:4000/api/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
+        const response = await submitForm(data);
         if (!response.ok) {
           throw new Error("Ошибка сервера");
         } else {
@@ -112,7 +110,7 @@ export const SolutionCatalogGetSolution = () => {
             </MainButton>
           </form>
           <span className={$.solutionCatalogGetSolution__email}>
-            Или отправьте запрос на почту: pro@bk-resurs.ru
+            Или отправьте запрос на почту: {CONTACTS.email}
           </span>
         </div>
       </div>

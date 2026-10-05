@@ -15,7 +15,7 @@ import {
   Reviews,
   Contacts,
 } from "sections";
-import { SideChipMail, SideMenu } from "components";
+import { SideChipMail, SideMenu, DemoBanner } from "components";
 import "./styles/fonts.css";
 import "./styles/root.css";
 import "@mantine/core/styles.layer.css";
@@ -23,7 +23,9 @@ import "@mantine/core/styles.layer.css";
 function App() {
   
   return (
-    <div className={$.app__wrapper}>
+    <>
+      <DemoBanner />
+      <div className={$.app__wrapper}>
       <div className={$.app__container}>
         <Main />
         <CompletedProjects />
@@ -43,6 +45,7 @@ function App() {
         <SideChipMail/>
       </div>
     </div>
+    </>
   );
 }
 
